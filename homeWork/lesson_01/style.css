@@ -1,0 +1,161 @@
+body {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgb(62, 62, 62);
+}
+
+h2 {
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgb(158, 158, 158);
+}
+
+img {
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+  border-radius: 100px;
+}
+
+.mb-s {
+  margin-bottom: .5rem;
+}
+
+.mb-m {
+  margin-bottom: 2rem;
+}
+
+.hero {
+  display: flex;
+}
+
+
+.left {
+  top: 0;
+  position: sticky;
+  padding: 4rem 4rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  flex: 1 0 420px;
+}
+
+.title {
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgb(62, 62, 62);
+  text-transform: capitalize;
+  letter-spacing: 0;
+}
+
+.location {
+  position: relative;
+  margin-left: 25px;
+  font-size: 16px;
+}
+
+.location::before {
+  margin-left: -18px;
+  top: 34%;
+  left: 0;
+  transform: translateY(-50%);
+  position: absolute;
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 100px;
+  background-color: rgb(220, 162, 224);
+  animation: pulse 3s infinite;
+}
+
+.icons {
+  display: flex;
+  gap: 30px;
+}
+
+path {
+  fill: rgb(158, 158, 158);
+  transition: all .5s easy;
+}
+
+path:hover {
+  fill: rgb(220, 162, 224);
+  cursor: pointer;
+}
+
+.right {
+  padding: 8rem 2rem 8rem 2rem;
+  border-left: 1px solid #e5e7eb;
+}
+
+.years {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgb(158, 158, 158);
+}
+
+li {
+  position: relative;
+  padding-left: 15px;
+  /* щоб зробити місце для кружка */
+}
+
+li::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgb(158, 158, 158);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(220, 162, 224, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(220, 162, 224, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(220, 162, 224, 0);
+  }
+}
+
+@media (max-width: 992px) {
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .left {
+    flex: 1 0 100%;
+    position: static;
+    height: 100%;
+    padding: 2rem;
+  }
+
+  .icons {
+    margin-top: 1rem;
+  }
+
+  .right {
+    padding: 0rem 2rem 2rem 2rem;
+    border-left: 1px solid transparent;
+  }
+}
