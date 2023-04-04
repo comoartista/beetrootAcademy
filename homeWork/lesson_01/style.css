@@ -15,6 +15,10 @@ body {
   margin-bottom: 16px;
 }
 
+.text--violet {
+  color: rgb(207, 117, 214);
+}
+
 .main {
   display: flex;
 }
@@ -93,6 +97,11 @@ path:hover {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: rgb(158, 158, 158);
+}
+
+.link__course {
+  text-decoration: underline;
+  color: rgb(62, 62, 62);
 }
 
 .years {
