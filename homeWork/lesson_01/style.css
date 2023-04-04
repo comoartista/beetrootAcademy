@@ -7,38 +7,29 @@ body {
   color: rgb(62, 62, 62);
 }
 
-h2 {
-  font-size: 14px;
-  line-height: 1.5;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgb(158, 158, 158);
+.mb--s {
+  margin-bottom: 4px;
 }
 
-img {
+.mb--m {
+  margin-bottom: 16px;
+}
+
+.main {
+  display: flex;
+}
+
+.main__img {
   max-width: 100px;
   width: 100%;
   height: auto;
   border-radius: 100px;
 }
 
-.mb-s {
-  margin-bottom: .5rem;
-}
-
-.mb-m {
-  margin-bottom: 2rem;
-}
-
-.hero {
-  display: flex;
-}
-
-
 .left {
   top: 0;
   position: sticky;
-  padding: 4rem 4rem 4rem;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -46,7 +37,7 @@ img {
   flex: 1 0 420px;
 }
 
-.title {
+.subtitle {
   font-size: 18px;
   line-height: 1.7;
   color: rgb(62, 62, 62);
@@ -56,12 +47,12 @@ img {
 
 .location {
   position: relative;
-  margin-left: 25px;
+  margin-left: 20px;
   font-size: 16px;
 }
 
 .location::before {
-  margin-left: -18px;
+  margin-left: -17px;
   top: 34%;
   left: 0;
   transform: translateY(-50%);
@@ -72,11 +63,12 @@ img {
   height: 8px;
   border-radius: 100px;
   background-color: rgb(220, 162, 224);
-  animation: pulse 3s infinite;
+  animation: pulse 2.5s infinite;
 }
 
-.icons {
+.icons__list {
   display: flex;
+  align-items: center;
   gap: 30px;
 }
 
@@ -91,8 +83,16 @@ path:hover {
 }
 
 .right {
-  padding: 8rem 2rem 8rem 2rem;
+  padding: 100px 50px 100px 30px;
   border-left: 1px solid #e5e7eb;
+}
+
+.right__title {
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgb(158, 158, 158);
 }
 
 .years {
@@ -101,13 +101,12 @@ path:hover {
   color: rgb(158, 158, 158);
 }
 
-li {
+.duties__item {
   position: relative;
   padding-left: 15px;
-  /* щоб зробити місце для кружка */
 }
 
-li::before {
+.duties__item::before {
   content: "";
   display: inline-block;
   width: 6px;
@@ -138,8 +137,12 @@ li::before {
 }
 
 @media (max-width: 992px) {
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
 
-  .hero {
+  .main {
     flex-direction: column;
   }
 
@@ -147,15 +150,15 @@ li::before {
     flex: 1 0 100%;
     position: static;
     height: 100%;
-    padding: 2rem;
+    padding: 10px;
   }
 
-  .icons {
-    margin-top: 1rem;
+  .icons__list {
+    margin-top: 10px;
   }
 
   .right {
-    padding: 0rem 2rem 2rem 2rem;
+    padding: 10px;
     border-left: 1px solid transparent;
   }
 }
