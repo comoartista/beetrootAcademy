@@ -78,13 +78,17 @@ body {
 
 path {
   fill: rgb(158, 158, 158);
-  transition: all .5s easy;
 }
 
-path:hover {
+.icons__link {
+  transition: fill 1s linear;
+}
+
+.icons__link:hover path {
   fill: rgb(220, 162, 224);
   cursor: pointer;
 }
+
 
 .right {
   padding: 100px 50px 100px 30px;
