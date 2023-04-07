@@ -5,12 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Denis Novik</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style/reset.css">
   <link rel="stylesheet" href="./style/style.css">
+  <title>Denis Novik</title>
+
 </head>
 
 <body>
@@ -24,16 +25,16 @@
               <a href="#" class="navigation__link">Home</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">About me</a>
+              <a href="#sectionAboutMe" class="navigation__link">About me</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Skills</a>
+              <a href="#sectionSkills" class="navigation__link">Skills</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Portfolio</a>
+              <a href="#sectionPortfolio" class="navigation__link">Portfolio</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Contacts</a>
+              <a href="#sectionContacts" class="navigation__link">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -47,7 +48,7 @@
         </div>
       </div>
     </section>
-    <section class="section__about-me section">
+    <section id="sectionAboutMe" class="section__about-me section">
       <div class="container">
         <div class="about-me">
           <h2 class="about-me__title title">About me</h2>
@@ -59,15 +60,17 @@
         </div>
       </div>
     </section>
-    <section class="section__skills section">
+    <section id="sectionSkills" class="section__skills section">
       <div class="container">
         <div class="skills">
           <h2 class="skills__title title">Skills</h2>
           <p class="skills__text">I work in such programs as</p>
           <div class="skills__items">
             <div class="skill__item">
-              <img class="skill__img" src="./images/icons/photoshop.svg" alt="photoshop">
-              <p class="skill__name">Adobe Photoshop</p>
+              <div class="skill__content">
+                <img class="skill__img" src="./images/icons/photoshop.svg" alt="Adobe Photoshop">
+                <p class="skill__name">Adobe <br> Photoshop</p>
+              </div>
               <div class="skill__rating">
                 <svg class="skill__star rating--black" width="27" height="26" viewBox="0 0 27 26" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -103,54 +106,127 @@
               </div>
             </div>
             <div class="skill__item">
-              <img class="skill__img" src="./images/icons/photoshop.svg" alt="photoshop">
-              <p class="skill__name">Adobe Photoshop</p>
+              <div class="skill__content">
+                <img class="skill__img" src="./images/icons/ai.svg" alt="Adobe Illustrator">
+                <p class="skill__name">Adobe <br> Illustrator</p>
+              </div>
               <div class="skill__rating">
-                <img class="skill__star" src="./images/icons/star.svg" alt="star">
-                <img class="skill__star" src="./images/icons/star.svg" alt="star">
-                <img class="skill__star" src="./images/icons/star.svg" alt="star">
-                <img class="skill__star" src="./images/icons/star.svg" alt="star">
-                <img class="skill__star" src="./images/icons/star.svg" alt="star">
+                <svg class="skill__star rating--black" width="27" height="26" viewBox="0 0 27 26" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.41471 25.6211C6.78429 26.1123 6.14017 26.1259 5.48235 25.662C4.82452 25.1982 4.60525 24.5843 4.82452 23.8203L7.16802 16.2485L1.20649 12.0329C0.54867 11.5691 0.350226 10.9551 0.611163 10.1911C0.871003 9.42715 1.39836 9.04516 2.19323 9.04516H9.55264L11.9372 1.18692C12.0743 0.804923 12.287 0.511331 12.5753 0.306144C12.8626 0.102048 13.1707 0 13.4996 0C13.8285 0 14.1366 0.102048 14.4238 0.306144C14.7122 0.511331 14.9249 0.804923 15.0619 1.18692L17.4465 9.04516H24.8059C25.6008 9.04516 26.1287 9.42715 26.3896 10.1911C26.6495 10.9551 26.4505 11.5691 25.7927 12.0329L19.8311 16.2485L22.1746 23.8203C22.3939 24.5843 22.1746 25.1982 21.5168 25.662C20.859 26.1259 20.2149 26.1123 19.5844 25.6211L13.4996 20.9962L7.41471 25.6211Z"
+                    fill="#E5E5E5" />
+                </svg>
+                <svg class="skill__star rating--black" width="27" height="26" viewBox="0 0 27 26" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.41471 25.6211C6.78429 26.1123 6.14017 26.1259 5.48235 25.662C4.82452 25.1982 4.60525 24.5843 4.82452 23.8203L7.16802 16.2485L1.20649 12.0329C0.54867 11.5691 0.350226 10.9551 0.611163 10.1911C0.871003 9.42715 1.39836 9.04516 2.19323 9.04516H9.55264L11.9372 1.18692C12.0743 0.804923 12.287 0.511331 12.5753 0.306144C12.8626 0.102048 13.1707 0 13.4996 0C13.8285 0 14.1366 0.102048 14.4238 0.306144C14.7122 0.511331 14.9249 0.804923 15.0619 1.18692L17.4465 9.04516H24.8059C25.6008 9.04516 26.1287 9.42715 26.3896 10.1911C26.6495 10.9551 26.4505 11.5691 25.7927 12.0329L19.8311 16.2485L22.1746 23.8203C22.3939 24.5843 22.1746 25.1982 21.5168 25.662C20.859 26.1259 20.2149 26.1123 19.5844 25.6211L13.4996 20.9962L7.41471 25.6211Z"
+                    fill="#E5E5E5" />
+                </svg>
+                <svg class="skill__star rating--black" width="27" height="26" viewBox="0 0 27 26" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.41471 25.6211C6.78429 26.1123 6.14017 26.1259 5.48235 25.662C4.82452 25.1982 4.60525 24.5843 4.82452 23.8203L7.16802 16.2485L1.20649 12.0329C0.54867 11.5691 0.350226 10.9551 0.611163 10.1911C0.871003 9.42715 1.39836 9.04516 2.19323 9.04516H9.55264L11.9372 1.18692C12.0743 0.804923 12.287 0.511331 12.5753 0.306144C12.8626 0.102048 13.1707 0 13.4996 0C13.8285 0 14.1366 0.102048 14.4238 0.306144C14.7122 0.511331 14.9249 0.804923 15.0619 1.18692L17.4465 9.04516H24.8059C25.6008 9.04516 26.1287 9.42715 26.3896 10.1911C26.6495 10.9551 26.4505 11.5691 25.7927 12.0329L19.8311 16.2485L22.1746 23.8203C22.3939 24.5843 22.1746 25.1982 21.5168 25.662C20.859 26.1259 20.2149 26.1123 19.5844 25.6211L13.4996 20.9962L7.41471 25.6211Z"
+                    fill="#E5E5E5" />
+                </svg>
+                <svg class="skill__star" width="27" height="26" viewBox="0 0 27 26" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.41471 25.6211C6.78429 26.1123 6.14017 26.1259 5.48235 25.662C4.82452 25.1982 4.60525 24.5843 4.82452 23.8203L7.16802 16.2485L1.20649 12.0329C0.54867 11.5691 0.350226 10.9551 0.611163 10.1911C0.871003 9.42715 1.39836 9.04516 2.19323 9.04516H9.55264L11.9372 1.18692C12.0743 0.804923 12.287 0.511331 12.5753 0.306144C12.8626 0.102048 13.1707 0 13.4996 0C13.8285 0 14.1366 0.102048 14.4238 0.306144C14.7122 0.511331 14.9249 0.804923 15.0619 1.18692L17.4465 9.04516H24.8059C25.6008 9.04516 26.1287 9.42715 26.3896 10.1911C26.6495 10.9551 26.4505 11.5691 25.7927 12.0329L19.8311 16.2485L22.1746 23.8203C22.3939 24.5843 22.1746 25.1982 21.5168 25.662C20.859 26.1259 20.2149 26.1123 19.5844 25.6211L13.4996 20.9962L7.41471 25.6211Z"
+                    fill="#E5E5E5" />
+                </svg>
+                <svg class="skill__star" width="27" height="26" viewBox="0 0 27 26" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.41471 25.6211C6.78429 26.1123 6.14017 26.1259 5.48235 25.662C4.82452 25.1982 4.60525 24.5843 4.82452 23.8203L7.16802 16.2485L1.20649 12.0329C0.54867 11.5691 0.350226 10.9551 0.611163 10.1911C0.871003 9.42715 1.39836 9.04516 2.19323 9.04516H9.55264L11.9372 1.18692C12.0743 0.804923 12.287 0.511331 12.5753 0.306144C12.8626 0.102048 13.1707 0 13.4996 0C13.8285 0 14.1366 0.102048 14.4238 0.306144C14.7122 0.511331 14.9249 0.804923 15.0619 1.18692L17.4465 9.04516H24.8059C25.6008 9.04516 26.1287 9.42715 26.3896 10.1911C26.6495 10.9551 26.4505 11.5691 25.7927 12.0329L19.8311 16.2485L22.1746 23.8203C22.3939 24.5843 22.1746 25.1982 21.5168 25.662C20.859 26.1259 20.2149 26.1123 19.5844 25.6211L13.4996 20.9962L7.41471 25.6211Z"
+                    fill="#E5E5E5" />
+                </svg>
+
               </div>
             </div>
             <div class="skill__item">
-              <img class="skill__img" src="./images/icons/photoshop.svg" alt="photoshop">
-              <p class="skill__name">Adobe Photoshop</p>
+              <div class="skill__content">
+                <img class="skill__img" src="./images/icons/ae.svg" alt="Adobe After Effects">
+                <p class="skill__name">Adobe <br> After <br> Effects</p>
+              </div>
               <div class="skill__rating">
-                <img class="skill__star" src="./images/icons/star.svg" alt="star">
-                <img class="skill__star" src="./images/icons/star.svg" alt="star">
-                <img class="skill__star" src="./images/icons/star.svg" alt="star">
-                <img class="skill__star" src="./images/icons/star.svg" alt="star">
-                <img class="skill__star" src="./images/icons/star.svg" alt="star">
+                <svg class="skill__star rating--black" width="27" height="26" viewBox="0 0 27 26" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.41471 25.6211C6.78429 26.1123 6.14017 26.1259 5.48235 25.662C4.82452 25.1982 4.60525 24.5843 4.82452 23.8203L7.16802 16.2485L1.20649 12.0329C0.54867 11.5691 0.350226 10.9551 0.611163 10.1911C0.871003 9.42715 1.39836 9.04516 2.19323 9.04516H9.55264L11.9372 1.18692C12.0743 0.804923 12.287 0.511331 12.5753 0.306144C12.8626 0.102048 13.1707 0 13.4996 0C13.8285 0 14.1366 0.102048 14.4238 0.306144C14.7122 0.511331 14.9249 0.804923 15.0619 1.18692L17.4465 9.04516H24.8059C25.6008 9.04516 26.1287 9.42715 26.3896 10.1911C26.6495 10.9551 26.4505 11.5691 25.7927 12.0329L19.8311 16.2485L22.1746 23.8203C22.3939 24.5843 22.1746 25.1982 21.5168 25.662C20.859 26.1259 20.2149 26.1123 19.5844 25.6211L13.4996 20.9962L7.41471 25.6211Z"
+                    fill="#E5E5E5" />
+                </svg>
+                <svg class="skill__star rating--black" width="27" height="26" viewBox="0 0 27 26" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.41471 25.6211C6.78429 26.1123 6.14017 26.1259 5.48235 25.662C4.82452 25.1982 4.60525 24.5843 4.82452 23.8203L7.16802 16.2485L1.20649 12.0329C0.54867 11.5691 0.350226 10.9551 0.611163 10.1911C0.871003 9.42715 1.39836 9.04516 2.19323 9.04516H9.55264L11.9372 1.18692C12.0743 0.804923 12.287 0.511331 12.5753 0.306144C12.8626 0.102048 13.1707 0 13.4996 0C13.8285 0 14.1366 0.102048 14.4238 0.306144C14.7122 0.511331 14.9249 0.804923 15.0619 1.18692L17.4465 9.04516H24.8059C25.6008 9.04516 26.1287 9.42715 26.3896 10.1911C26.6495 10.9551 26.4505 11.5691 25.7927 12.0329L19.8311 16.2485L22.1746 23.8203C22.3939 24.5843 22.1746 25.1982 21.5168 25.662C20.859 26.1259 20.2149 26.1123 19.5844 25.6211L13.4996 20.9962L7.41471 25.6211Z"
+                    fill="#E5E5E5" />
+                </svg>
+                <svg class="skill__star rating--black" width="27" height="26" viewBox="0 0 27 26" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.41471 25.6211C6.78429 26.1123 6.14017 26.1259 5.48235 25.662C4.82452 25.1982 4.60525 24.5843 4.82452 23.8203L7.16802 16.2485L1.20649 12.0329C0.54867 11.5691 0.350226 10.9551 0.611163 10.1911C0.871003 9.42715 1.39836 9.04516 2.19323 9.04516H9.55264L11.9372 1.18692C12.0743 0.804923 12.287 0.511331 12.5753 0.306144C12.8626 0.102048 13.1707 0 13.4996 0C13.8285 0 14.1366 0.102048 14.4238 0.306144C14.7122 0.511331 14.9249 0.804923 15.0619 1.18692L17.4465 9.04516H24.8059C25.6008 9.04516 26.1287 9.42715 26.3896 10.1911C26.6495 10.9551 26.4505 11.5691 25.7927 12.0329L19.8311 16.2485L22.1746 23.8203C22.3939 24.5843 22.1746 25.1982 21.5168 25.662C20.859 26.1259 20.2149 26.1123 19.5844 25.6211L13.4996 20.9962L7.41471 25.6211Z"
+                    fill="#E5E5E5" />
+                </svg>
+                <svg class="skill__star rating--black" width="27" height="26" viewBox="0 0 27 26" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.41471 25.6211C6.78429 26.1123 6.14017 26.1259 5.48235 25.662C4.82452 25.1982 4.60525 24.5843 4.82452 23.8203L7.16802 16.2485L1.20649 12.0329C0.54867 11.5691 0.350226 10.9551 0.611163 10.1911C0.871003 9.42715 1.39836 9.04516 2.19323 9.04516H9.55264L11.9372 1.18692C12.0743 0.804923 12.287 0.511331 12.5753 0.306144C12.8626 0.102048 13.1707 0 13.4996 0C13.8285 0 14.1366 0.102048 14.4238 0.306144C14.7122 0.511331 14.9249 0.804923 15.0619 1.18692L17.4465 9.04516H24.8059C25.6008 9.04516 26.1287 9.42715 26.3896 10.1911C26.6495 10.9551 26.4505 11.5691 25.7927 12.0329L19.8311 16.2485L22.1746 23.8203C22.3939 24.5843 22.1746 25.1982 21.5168 25.662C20.859 26.1259 20.2149 26.1123 19.5844 25.6211L13.4996 20.9962L7.41471 25.6211Z"
+                    fill="#E5E5E5" />
+                </svg>
+                <svg class="skill__star" width="27" height="26" viewBox="0 0 27 26" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.41471 25.6211C6.78429 26.1123 6.14017 26.1259 5.48235 25.662C4.82452 25.1982 4.60525 24.5843 4.82452 23.8203L7.16802 16.2485L1.20649 12.0329C0.54867 11.5691 0.350226 10.9551 0.611163 10.1911C0.871003 9.42715 1.39836 9.04516 2.19323 9.04516H9.55264L11.9372 1.18692C12.0743 0.804923 12.287 0.511331 12.5753 0.306144C12.8626 0.102048 13.1707 0 13.4996 0C13.8285 0 14.1366 0.102048 14.4238 0.306144C14.7122 0.511331 14.9249 0.804923 15.0619 1.18692L17.4465 9.04516H24.8059C25.6008 9.04516 26.1287 9.42715 26.3896 10.1911C26.6495 10.9551 26.4505 11.5691 25.7927 12.0329L19.8311 16.2485L22.1746 23.8203C22.3939 24.5843 22.1746 25.1982 21.5168 25.662C20.859 26.1259 20.2149 26.1123 19.5844 25.6211L13.4996 20.9962L7.41471 25.6211Z"
+                    fill="#E5E5E5" />
+                </svg>
+
               </div>
             </div>
             <div class="skill__item">
-              <img class="skill__img" src="./images/icons/photoshop.svg" alt="photoshop">
-              <p class="skill__name">Adobe Photoshop</p>
-              <div class="skill__rating">
-                <img class="skill__star" src="./images/icons/star.svg" alt="star">
-                <img class="skill__star" src="./images/icons/star.svg" alt="star">
-                <img class="skill__star" src="./images/icons/star.svg" alt="star">
-                <img class="skill__star" src="./images/icons/star.svg" alt="star">
-                <img class="skill__star" src="./images/icons/star.svg" alt="star">
+              <div class="skill__content">
+                <img class="skill__img" src="./images/icons/figma.svg" alt="Figma">
+                <p class="skill__name">Figma</p>
               </div>
-            </div>
-            <div class="skill__item">
-              <img class="skill__img" src="./images/icons/photoshop.svg" alt="photoshop">
-              <p class="skill__name">Adobe Photoshop</p>
               <div class="skill__rating">
-                <img class="skill__star" src="./images/icons/star.svg" alt="star">
-                <img class="skill__star" src="./images/icons/star.svg" alt="star">
-                <img class="skill__star" src="./images/icons/star.svg" alt="star">
-                <img class="skill__star" src="./images/icons/star.svg" alt="star">
-                <img class="skill__star" src="./images/icons/star.svg" alt="star">
+                <svg class="skill__star rating--black" width="27" height="26" viewBox="0 0 27 26" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.41471 25.6211C6.78429 26.1123 6.14017 26.1259 5.48235 25.662C4.82452 25.1982 4.60525 24.5843 4.82452 23.8203L7.16802 16.2485L1.20649 12.0329C0.54867 11.5691 0.350226 10.9551 0.611163 10.1911C0.871003 9.42715 1.39836 9.04516 2.19323 9.04516H9.55264L11.9372 1.18692C12.0743 0.804923 12.287 0.511331 12.5753 0.306144C12.8626 0.102048 13.1707 0 13.4996 0C13.8285 0 14.1366 0.102048 14.4238 0.306144C14.7122 0.511331 14.9249 0.804923 15.0619 1.18692L17.4465 9.04516H24.8059C25.6008 9.04516 26.1287 9.42715 26.3896 10.1911C26.6495 10.9551 26.4505 11.5691 25.7927 12.0329L19.8311 16.2485L22.1746 23.8203C22.3939 24.5843 22.1746 25.1982 21.5168 25.662C20.859 26.1259 20.2149 26.1123 19.5844 25.6211L13.4996 20.9962L7.41471 25.6211Z"
+                    fill="#E5E5E5" />
+                </svg>
+                <svg class="skill__star rating--black" width="27" height="26" viewBox="0 0 27 26" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.41471 25.6211C6.78429 26.1123 6.14017 26.1259 5.48235 25.662C4.82452 25.1982 4.60525 24.5843 4.82452 23.8203L7.16802 16.2485L1.20649 12.0329C0.54867 11.5691 0.350226 10.9551 0.611163 10.1911C0.871003 9.42715 1.39836 9.04516 2.19323 9.04516H9.55264L11.9372 1.18692C12.0743 0.804923 12.287 0.511331 12.5753 0.306144C12.8626 0.102048 13.1707 0 13.4996 0C13.8285 0 14.1366 0.102048 14.4238 0.306144C14.7122 0.511331 14.9249 0.804923 15.0619 1.18692L17.4465 9.04516H24.8059C25.6008 9.04516 26.1287 9.42715 26.3896 10.1911C26.6495 10.9551 26.4505 11.5691 25.7927 12.0329L19.8311 16.2485L22.1746 23.8203C22.3939 24.5843 22.1746 25.1982 21.5168 25.662C20.859 26.1259 20.2149 26.1123 19.5844 25.6211L13.4996 20.9962L7.41471 25.6211Z"
+                    fill="#E5E5E5" />
+                </svg>
+                <svg class="skill__star rating--black" width="27" height="26" viewBox="0 0 27 26" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.41471 25.6211C6.78429 26.1123 6.14017 26.1259 5.48235 25.662C4.82452 25.1982 4.60525 24.5843 4.82452 23.8203L7.16802 16.2485L1.20649 12.0329C0.54867 11.5691 0.350226 10.9551 0.611163 10.1911C0.871003 9.42715 1.39836 9.04516 2.19323 9.04516H9.55264L11.9372 1.18692C12.0743 0.804923 12.287 0.511331 12.5753 0.306144C12.8626 0.102048 13.1707 0 13.4996 0C13.8285 0 14.1366 0.102048 14.4238 0.306144C14.7122 0.511331 14.9249 0.804923 15.0619 1.18692L17.4465 9.04516H24.8059C25.6008 9.04516 26.1287 9.42715 26.3896 10.1911C26.6495 10.9551 26.4505 11.5691 25.7927 12.0329L19.8311 16.2485L22.1746 23.8203C22.3939 24.5843 22.1746 25.1982 21.5168 25.662C20.859 26.1259 20.2149 26.1123 19.5844 25.6211L13.4996 20.9962L7.41471 25.6211Z"
+                    fill="#E5E5E5" />
+                </svg>
+                <svg class="skill__star rating--black" width="27" height="26" viewBox="0 0 27 26" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.41471 25.6211C6.78429 26.1123 6.14017 26.1259 5.48235 25.662C4.82452 25.1982 4.60525 24.5843 4.82452 23.8203L7.16802 16.2485L1.20649 12.0329C0.54867 11.5691 0.350226 10.9551 0.611163 10.1911C0.871003 9.42715 1.39836 9.04516 2.19323 9.04516H9.55264L11.9372 1.18692C12.0743 0.804923 12.287 0.511331 12.5753 0.306144C12.8626 0.102048 13.1707 0 13.4996 0C13.8285 0 14.1366 0.102048 14.4238 0.306144C14.7122 0.511331 14.9249 0.804923 15.0619 1.18692L17.4465 9.04516H24.8059C25.6008 9.04516 26.1287 9.42715 26.3896 10.1911C26.6495 10.9551 26.4505 11.5691 25.7927 12.0329L19.8311 16.2485L22.1746 23.8203C22.3939 24.5843 22.1746 25.1982 21.5168 25.662C20.859 26.1259 20.2149 26.1123 19.5844 25.6211L13.4996 20.9962L7.41471 25.6211Z"
+                    fill="#E5E5E5" />
+                </svg>
+                <svg class="skill__star rating--black" width="27" height="26" viewBox="0 0 27 26" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.41471 25.6211C6.78429 26.1123 6.14017 26.1259 5.48235 25.662C4.82452 25.1982 4.60525 24.5843 4.82452 23.8203L7.16802 16.2485L1.20649 12.0329C0.54867 11.5691 0.350226 10.9551 0.611163 10.1911C0.871003 9.42715 1.39836 9.04516 2.19323 9.04516H9.55264L11.9372 1.18692C12.0743 0.804923 12.287 0.511331 12.5753 0.306144C12.8626 0.102048 13.1707 0 13.4996 0C13.8285 0 14.1366 0.102048 14.4238 0.306144C14.7122 0.511331 14.9249 0.804923 15.0619 1.18692L17.4465 9.04516H24.8059C25.6008 9.04516 26.1287 9.42715 26.3896 10.1911C26.6495 10.9551 26.4505 11.5691 25.7927 12.0329L19.8311 16.2485L22.1746 23.8203C22.3939 24.5843 22.1746 25.1982 21.5168 25.662C20.859 26.1259 20.2149 26.1123 19.5844 25.6211L13.4996 20.9962L7.41471 25.6211Z"
+                    fill="#E5E5E5" />
+                </svg>
+
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="section__portfolio section">
+    <section id="sectionPortfolio" class="section__portfolio section">
       <div class="container">
         <div class="portfolio">
           <h2 class="portfolio__title title">Portfolio</h2>
@@ -169,7 +245,7 @@
         </div>
       </div>
     </section>
-    <footer class="footer section">
+    <footer id="sectionContacts" class="footer section">
       <div class="container">
         <div class="footer__wrapper">
           <h2 class="footer__title title">Contacts</h2>
