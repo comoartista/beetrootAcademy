@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <a href="./index.html">home</a>
+      <nav>
+        <ul>
+          <li><a href="./registration.html">Sign Up</a></li>
+          <li><a href="./login.html">Log in</a></li>
+        </ul>
+      </nav>
+    </header>
+    <form class="form">
+      <div class="form__field">
+        <label for="login">Login</label>
+        <input id="login" type="text" required>
+      </div>
+      <div class="form__field">
+        <label for="name">Name</label>
+        <input id="name" type="text" required>
+      </div>
+      <div class="form__field">
+        <label for="Email">Email</label>
+        <input id="Email" type="email" required>
+      </div>
+      <div class="form__field">
+        <label for="Phone">Phone</label>
+        <input id="Phone" type="tel" required>
+      </div>
+      <div class="form__field">
+        <label for="password">Password</label>
+        <input id="password" type="password" required>
+      </div>
+      <div class="form__field">
+        <label for="checkbox">Мені є 18</label>
+        <input id="checkbox" type="checkbox" required>
+      </div>
+      <label for="country">Обери країну:</label>
+      <select name="country" id="country">
+        <option value="">--Please choose an option--</option>
+        <option value="ukraine">Ukraine</option>
+        <option value="germany">Germany</option>
+        <option value="spain">Spain</option>
+      </select>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</body>
+
+</html>
