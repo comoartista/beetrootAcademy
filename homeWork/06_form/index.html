@@ -126,50 +126,53 @@
           </div>
           <div class="form__row">
             <div class="form__field">
-              <input id="firstName" name="First name" type="text" required>
-              <label for="firstName">First name</label>
+              <input id="firstName" class="form__input" name="First name" type="text" required>
+              <label class="form__label" for="firstName">First name</label>
             </div>
             <div class="form__field">
-              <input id="lastName" name="Last name" type="text" required>
-              <label for="lastName">Last name</label>
-            </div>
-          </div>
-          <div class="form__row">
-            <div class="form__field">
-              <input id="emailAddress" name="Email address" type="email" required>
-              <label for="emailAddress">Email address</label>
-            </div>
-            <div class="form__field">
-              <input id="phoneNumber" name="Phone number" type="tel" required>
-              <label for="phoneNumber">Phone number</label>
+              <input id="lastName" class="form__input" name="Last name" type="text" required>
+              <label class="form__label" for="lastName">Last name</label>
             </div>
           </div>
           <div class="form__row">
             <div class="form__field">
-              <input id="address" name="Address" type="email" required>
-              <label for="address">Address</label>
+              <input id="emailAddress" class="form__input" name="Email address" type="email" required>
+              <label class="form__label" for="emailAddress">Email address</label>
             </div>
             <div class="form__field">
-              <input id="town-city" name="Town / City" type="tel" required>
-              <label for="town-city">Town / City</label>
-            </div>
-          </div>
-          <div class="form__row">
-            <div class="form__field">
-              <input id="state-country" name="State / Country" type="email" required>
-              <label for="state-country">State / Country</label>
-            </div>
-            <div class="form__field">
-              <input id="postal-code" name="ZIP/Postal code" type="tel" required>
-              <label for="postal-code" class="form__label">ZIP/Postal code</label>
+              <input id="phoneNumber" class="form__input" name="Phone number" type="tel" required>
+              <label class="form__label" for="phoneNumber">Phone number</label>
             </div>
           </div>
           <div class="form__row">
             <div class="form__field">
-              <label class="form-control">
-                <input type="checkbox" name="checkbox" />
-                Ship to a different address?
-              </label>
+              <input id="address" class="form__input" name="Address" type="email" required>
+              <label class="form__label" for="address">Address</label>
+            </div>
+            <div class="form__field">
+              <input id="town-city" class="form__input" name="Town / City" type="tel" required>
+              <label class="form__label" for="town-city">Town / City</label>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__field">
+              <select id="state-country" class="custom-select form__input" name="State / Country">
+                <option value="">Choose a state or Country</option>
+                <option value="germany">Germany</option>
+                <option value="italy">Italy</option>
+                <option value="spain">Spain</option>
+              </select>
+              <label class="form__label" for="state-country">State / Country</label>
+            </div>
+            <div class="form__field">
+              <input id="postal-code" class="form__input" name="ZIP/Postal code" type="tel" required>
+              <label class="form__label" for="postal-code" class="form__label">ZIP/Postal code</label>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__field--checkbox">
+              <input class="form__input--checkbox" type="checkbox" name="checkbox" />
+              <label class="form__label--checkbox">Ship to a different address?</label>
             </div>
           </div>
           <h2 class="form__title title">Billing method</h2>
