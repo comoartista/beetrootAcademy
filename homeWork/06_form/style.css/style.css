@@ -64,10 +64,13 @@ body {
   color: #151515;
 }
 
-.text {
+.text__wrapper {
   margin: 4px 0 32px;
   display: flex;
   justify-content: space-between;
+}
+
+.form__text {
   font-size: 12px;
   line-height: 16px;
   color: #A9A9A9;
