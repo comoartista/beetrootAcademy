@@ -134,7 +134,7 @@
               <label class="form__label" for="lastName">Last name</label>
             </div>
           </div>
-          <!-- <div class="form__row">
+          <div class="form__row">
             <div class="form__field">
               <input id="emailAddress" class="form__input" name="Email address" type="email" required>
               <label class="form__label" for="emailAddress">Email address</label>
@@ -146,54 +146,39 @@
           </div>
           <div class="form__row">
             <div class="form__field">
-              <input id="address" class="form__input" name="Address" type="email" required>
+              <input id="address" class="form__input" name="Address" type="text" required>
               <label class="form__label" for="address">Address</label>
             </div>
             <div class="form__field">
-              <input id="town-city" class="form__input" name="Town / City" type="tel" required>
-              <label class="form__label" for="town-city">Town / City</label>
+              <input id="town-or-city" class="form__input" name="Town or city" type="text" required>
+              <label class="form__label" for="town-or-city">Town or city</label>
             </div>
           </div>
           <div class="form__row">
             <div class="form__field">
-              <select id="state-country" class="custom-select form__input" name="State / Country">
+              <select id="state-country" class="form__input form__select" name="State / Country" required>
                 <option value="">Choose a state or Country</option>
-                <option value="germany">Germany</option>
-                <option value="italy">Italy</option>
-                <option value="spain">Spain</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="Mexico">Mexico</option>
               </select>
-              <label class="form__label" for="state-country">State / Country</label>
+              <label class="form__label form__label--select" for="state-country">State / Country</label>
             </div>
             <div class="form__field">
-              <input id="postal-code" class="form__input" name="ZIP/Postal code" type="tel" required>
-              <label class="form__label" for="postal-code" class="form__label">ZIP/Postal code</label>
+              <input id="postalCode" class="form__input" name="Postal code" type="text" required>
+              <label class="form__label" for="postalCode">Postal code or ZIP</label>
             </div>
-          </div> -->
-
-          <!-- <h2 class="form__title title">Billing method</h2>
-          <div class="form__text text">
+          </div>
+          <div class="form__field--checkbox">
+            <input id="postalCode" class="form__checkbox" name="Postal code" type="checkbox" required>
+            <label class="form__label--checkbox" for="postalCode">Ship to a different address?</label>
+          </div>
+          <div class="form__wrapper form__text text">
+            <h2 class="form__title title">Billing info</h2>
             <p class="form__descr">Please enter your payment method</p>
-            <p class="form__step">Step 2 of 5</p>
           </div>
-          <h2 class="form__title title">Additional informations</h2>
-          <p class="form__descr">Need something else? We will make it for you!</p>
-          <div class="form__field--checkbox">
-            <textarea name="" id="" cols="30" rows="10"
-              placeholder="Need a specific delivery day? Sending a gitf? Let’s say ..."></textarea>
-            <label class="form__label--textarea">Order notes</label>
-          </div>
-          <h2 class="form__title title">Confirmation</h2>
-          <p class="form__descr">We are getting to the end. Just few clicks and your order si ready!</p>
-          <div class="form__field--checkbox">
-            <input class="form__input--checkbox" type="checkbox" name="checkbox" />
-            <label class="form__label--checkbox">I agree with sending an Marketing and newsletter emails. No spam,
-              promissed!</label>
-          </div>
-          <div class="form__field--checkbox">
-            <input class="form__input--checkbox" type="checkbox" name="checkbox" />
-            <label class="form__label--checkbox">I agree with our terms and conditions and privacy policy.</label>
-          </div> -->
-          <!-- <button type="submit">Complete order</button> -->
+
+          <button class="form__button" type="submit">Complete order</button>
         </form>
       </div>
     </section>
