@@ -1,18 +1,15 @@
 * {
   padding: 0;
   margin: 0;
-}
-
-.wrapper {
-  height: 100vh;
+  box-sizing: border-box;
 }
 
 .container {
-  padding: 20px;
-  height: 100%;
+  padding: 0 20px;
 }
 
 .first {
+  margin: 20px 0;
   height: 300px;
   background: #57C5B6;
 }
@@ -22,8 +19,8 @@
   height: 100px;
   background: #159895;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .second__item {
@@ -43,8 +40,8 @@
   background: #159895;
   height: 200px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .fourth__item {
@@ -52,8 +49,8 @@
   width: calc(100% - 40px);
   background: #1A5F7A;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .fourth__item2 {
