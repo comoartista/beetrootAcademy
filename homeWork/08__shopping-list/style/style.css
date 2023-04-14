@@ -1,0 +1,160 @@
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+/* Reset End */
+
+/* Variables */
+:root {
+  /* Color */
+  --color-red: #FF8984;
+  --color-black: #3B3F45;
+  --color-black-dark: #000000;
+  --color-black-light: #4A4F56;
+  --color-grey: #7A7593;
+  --color-grey-light: #88839E;
+  --color-grey-dark: #625E77;
+}
+
+/* Variables End */
+
+/* Global style */
+* {
+  transition: all .1s ease-in;
+}
+
+body {
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.wrapper {
+  background: var(--color-black);
+  margin: 10px;
+  height: calc(100vh - 20px);
+}
+
+.container {
+  margin: 20px auto;
+  max-width: 534px;
+  width: 100%;
+}
+
+/* Global style End */
+
+/* Style Header */
+.header {
+  margin: 0 0 20px;
+  text-align: center;
+  color: var(--color-red);
+  background: var(--color-black-light);
+}
+
+.header__title {
+  padding: 19px 0;
+  font: 700px 24px / 28px;
+}
+
+.header__subtitle {
+  padding: 4px 0 12px;
+  font: 400px 16px / 19px;
+}
+
+/* Style Header End */
+
+/* Style Shopping List */
+.shopping__item {
+  padding: 12px;
+  background: var(--color-grey-light);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+}
+
+.shopping__item:nth-child(even) {
+  background: var(--color-grey);
+}
+
+.shopping__item:hover {
+  background: var(--color-grey-dark);
+  border-top: 3px solid #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
+  cursor: pointer;
+}
+
+.shopping__item:active {
+  background: var(--color-red);
+}
+
+.shopping__input {
+  height: 19px;
+  width: 19px;
+}
+
+.shopping__label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.shopping__descr {
+  font-size: 11px;
+  position: relative;
+}
+
+/* Adding parentheses through a pseudo-element */
+.shopping__descr::before {
+  content: "(";
+  position: absolute;
+  top: 0;
+  left: -5px;
+}
+
+.shopping__descr::after {
+  content: ")";
+  position: absolute;
+  top: 0;
+  right: -5px;
+}
+
+/* Сrossing out the schoping item in the status "checked"*/
+.shopping__input:checked+.shopping__label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: calc(100% + 5px);
+  height: 1px;
+  background: #FFFFFF;
+  transform: translateY(-50%);
+}
+
+/* Style Shopping List End */
+
+/* Style Footer */
+.footer__item {
+  text-align: center;
+  margin: 45px 0;
+  padding: 15px;
+  color: var(--color-red);
+  background: var(--color-black-light);
+  font: 400px 16px / 19px;
+}
+
+/* Style Footer End */

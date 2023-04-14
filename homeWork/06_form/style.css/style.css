@@ -85,7 +85,7 @@ body {
   justify-content: space-between;
 }
 
-.form__field {
+.list {
   width: 100%;
   position: relative;
 }
@@ -147,7 +147,7 @@ body {
   color: #6A983C;
 }
 
-.form__field--checkbox {
+.list--checkbox {
   padding: 20px 15px 20px 15px;
   outline: 1px solid #D1D1D1;
   border-radius: 12px;
