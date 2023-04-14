@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  transition: all .2s linear;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
@@ -43,11 +47,11 @@ body {
   line-height: 25px;
   letter-spacing: 0.02em;
   color: #828282;
-  transition: color .2s linear;
 }
 
 .navigation__link:hover {
   color: #070707;
+  font-weight: 700;
 }
 
 /* Section Main */
@@ -165,6 +169,13 @@ body {
   font-size: 18px;
   line-height: 25px;
   text-align: center;
+  border: 2px solid transparent;
+}
+
+.footer__btn:hover {
+  color: #070707;
+  background: #FFFFFF;
+  border: 2px solid #070707;
 }
 
 .footer__icons {
@@ -172,6 +183,11 @@ body {
   display: flex;
   justify-content: center;
   gap: 50px;
+}
+
+.footer__icon:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
 
 .footer__inform {
