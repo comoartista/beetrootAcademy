@@ -5,183 +5,57 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css/reset.css">
+  <title></title>
   <link rel="stylesheet" href="./style.css/style.css">
 </head>
 
 <body>
   <div class="wrapper">
-    <!-- <header class="header">
-      <div class="container">
-        <a href="#" class="logo"></a>
+    <form action="" class="form">
+      <h1 class="form__title">Welcome</h1>
+      <p class="form__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam duis vitae curabitur amet,
+        fermentum lorem. </p>
+      <div class="form__row">
+        <div class="form__field">
+          <input id="firstName" class="form__input" name="First name" type="text" placeholder="Your name">
+          <label for="firstName" class="form__label">First name
+            <span class="form__star">*</span></label>
+        </div>
+        <div class="form__field">
+          <input id="lastName" class="form__input" name="Last name" type="text" placeholder="Your last name">
+          <label for="lastName" class="form__label">Last name
+            <span class="form__star">*</span></label>
+        </div>
       </div>
-      <div class="container container--bg">
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#" class="nav__link">Bakery
-                <svg class="nav__icon" width="8" height="5" viewBox="0 0 8 5" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1.60938 1.40001L3.66437 3.45501C3.75806 3.54814 3.88478 3.60041 4.01687 3.60041C4.14897 3.60041 4.27569 3.54814 4.36937 3.45501L6.36937 1.45501"
-                    stroke="#6A983C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
-                </svg>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Bakery
-                <svg class="nav__icon" width="8" height="5" viewBox="0 0 8 5" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1.60938 1.40001L3.66437 3.45501C3.75806 3.54814 3.88478 3.60041 4.01687 3.60041C4.14897 3.60041 4.27569 3.54814 4.36937 3.45501L6.36937 1.45501"
-                    stroke="#6A983C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
-                </svg>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Fruit and vegetables
-                <svg class="nav__icon" width="8" height="5" viewBox="0 0 8 5" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1.60938 1.40001L3.66437 3.45501C3.75806 3.54814 3.88478 3.60041 4.01687 3.60041C4.14897 3.60041 4.27569 3.54814 4.36937 3.45501L6.36937 1.45501"
-                    stroke="#6A983C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
-                </svg>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Meat and fish
-                <svg class="nav__icon" width="8" height="5" viewBox="0 0 8 5" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1.60938 1.40001L3.66437 3.45501C3.75806 3.54814 3.88478 3.60041 4.01687 3.60041C4.14897 3.60041 4.27569 3.54814 4.36937 3.45501L6.36937 1.45501"
-                    stroke="#6A983C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
-                </svg>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Kitchen
-                <svg class="nav__icon" width="8" height="5" viewBox="0 0 8 5" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1.60938 1.40001L3.66437 3.45501C3.75806 3.54814 3.88478 3.60041 4.01687 3.60041C4.14897 3.60041 4.27569 3.54814 4.36937 3.45501L6.36937 1.45501"
-                    stroke="#6A983C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
-                </svg>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Special nutrition
-                <svg class="nav__icon" width="8" height="5" viewBox="0 0 8 5" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1.60938 1.40001L3.66437 3.45501C3.75806 3.54814 3.88478 3.60041 4.01687 3.60041C4.14897 3.60041 4.27569 3.54814 4.36937 3.45501L6.36937 1.45501"
-                    stroke="#6A983C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
-                </svg>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Pharmacy
-                <svg class="nav__icon" width="8" height="5" viewBox="0 0 8 5" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1.60938 1.40001L3.66437 3.45501C3.75806 3.54814 3.88478 3.60041 4.01687 3.60041C4.14897 3.60041 4.27569 3.54814 4.36937 3.45501L6.36937 1.45501"
-                    stroke="#6A983C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
-                </svg>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Meat and fish
-                <svg class="nav__icon" width="8" height="5" viewBox="0 0 8 5" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1.60938 1.40001L3.66437 3.45501C3.75806 3.54814 3.88478 3.60041 4.01687 3.60041C4.14897 3.60041 4.27569 3.54814 4.36937 3.45501L6.36937 1.45501"
-                    stroke="#6A983C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
-                </svg>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Meat and fish
-                <svg class="nav__icon" width="8" height="5" viewBox="0 0 8 5" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1.60938 1.40001L3.66437 3.45501C3.75806 3.54814 3.88478 3.60041 4.01687 3.60041C4.14897 3.60041 4.27569 3.54814 4.36937 3.45501L6.36937 1.45501"
-                    stroke="#6A983C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </nav>
+      <div class="form__field">
+        <input id="email" class="form__input" name="Email" type="email" placeholder="yourmail@gmail.com">
+        <label for="email" class="form__label">Email
+          <span class="form__star">*</span></label>
       </div>
-    </header> -->
-    <section class="checkout">
-      <div class="container">
-        <form action="" class="form">
-          <h2 class="form__title title">Billing info</h2>
-          <div class="text__wrapper">
-            <p class="form__text">Please enter your billing info</p>
-            <p class="form__text">Step 1 of 5</p>
-          </div>
-          <div class="form__row">
-            <div class="list">
-              <input id="firstName" class="form__input" name="First name" type="text" required>
-              <label class="form__label" for="firstName">First name</label>
-            </div>
-            <div class="list">
-              <input id="lastName" class="form__input" name="Last name" type="text" required>
-              <label class="form__label" for="lastName">Last name</label>
-            </div>
-          </div>
-          <div class="form__row">
-            <div class="list">
-              <input id="emailAddress" class="form__input" name="Email address" type="email" required>
-              <label class="form__label" for="emailAddress">Email address</label>
-            </div>
-            <div class="list">
-              <input id="phoneNumber" class="form__input" name="Phone number" type="tel" required>
-              <label class="form__label" for="phoneNumber">Phone number</label>
-            </div>
-          </div>
-          <div class="form__row">
-            <div class="list">
-              <input id="address" class="form__input" name="Address" type="text" required>
-              <label class="form__label" for="address">Address</label>
-            </div>
-            <div class="list">
-              <input id="town-or-city" class="form__input" name="Town or city" type="text" required>
-              <label class="form__label" for="town-or-city">Town or city</label>
-            </div>
-          </div>
-          <div class="form__row">
-            <div class="list">
-              <select id="state-country" class="form__input form__select" name="State / Country" required>
-                <option value="">Choose a state or Country</option>
-                <option value="USA">USA</option>
-                <option value="Canada">Canada</option>
-                <option value="Mexico">Mexico</option>
-              </select>
-              <label class="form__label form__label--select" for="state-country">State / Country</label>
-            </div>
-            <div class="list">
-              <input id="postalCode" class="form__input" name="Postal code" type="text" required>
-              <label class="form__label" for="postalCode">Postal code or ZIP</label>
-            </div>
-          </div>
-          <div class="list--checkbox">
-            <input id="postalCode" class="form__checkbox" name="Postal code" type="checkbox" required>
-            <label class="form__label--checkbox" for="postalCode">Ship to a different address?</label>
-          </div>
-          <div class="form__wrapper">
-            <h2 class="form__title title">Billing info</h2>
-            <p class="form__text">Please enter your payment method</p>
-          </div>
-
-          <button class="form__button" type="submit">Complete order</button>
-        </form>
+      <div class="form__field">
+        <input id="password" class="form__input" name="Password" type="password" placeholder="•••••••••••••">
+        <label for="password" class="form__label">Password
+          <span class="form__star">*</span></label>
       </div>
-    </section>
+      <div class="form__field">
+        <select id="city" name="City">
+          <option value="">Select city</option>
+          <option value="london">London</option>
+          <option value="paris">Paris</option>
+        </select>
+        <input id="" class="form__input" name="City" type="password" placeholder="Select city">
+        <label for="city" class="form__label">City
+          <span class="form__location"></span></label>
+      </div>
+      <div class="form__field">
+        <input id="birthday" class="form__input" name="Birthday" type="date" placeholder="Select city">
+        <label for="birthday" class="form__label">City
+      </div>
+      <div class="form__field">
+        <input id="birthday" class="form__input" name="Birthday" type="date" placeholder="Select city">
+        <label for="birthday" class="form__label">City
+      </div>
+    </form>
   </div>
 </body>
 

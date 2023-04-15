@@ -1,0 +1,165 @@
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all .1s ease-in;
+}
+
+/* Reset End*/
+
+/* Global style*/
+body {
+  font-family: 'Lucida Sans Unicode', sans-serif;
+  color: #ffffff;
+}
+
+i {
+  font-family: 'Weather Icons';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 61px;
+}
+
+.container {
+  max-width: 1166px;
+  width: 100%;
+  margin: 0 auto;
+
+  /* padding: 20px; */
+}
+
+/* Global style End*/
+
+/* Header */
+.header__title {
+  font-size: 21px;
+  line-height: 25px;
+  margin: 50px 0 35px;
+}
+
+/* Header End*/
+
+.main__list {
+  font-size: 0;
+  border: 2px solid #ffffff;
+}
+
+.main__item {
+  display: inline-block;
+  border: 2px solid #ffffff;
+  padding: 26px;
+  text-align: center;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.main__item:hover {
+  opacity: .9;
+}
+
+.main__title {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.main__inform {
+  margin: 4px 0;
+  vertical-align: middle;
+
+}
+
+.main__item--1 {
+  background: #3399CC;
+  width: 50%;
+}
+
+.main__item--2 {
+  background: #33CCCC;
+  width: 25%;
+}
+
+.main__item--3 {
+  background: #996699;
+  width: 25%;
+}
+
+.main__item--4 {
+  background: #C24747;
+  width: 25%;
+}
+
+.main__item--5 {
+  background: #E2674A;
+  width: 25%;
+}
+
+.main__item--6 {
+  background: #FFCC66;
+  width: 25%;
+}
+
+.main__item--7 {
+  background: #99CC99;
+  width: 25%;
+}
+
+.main__item--8 {
+  background: #669999;
+  width: 25%;
+}
+
+.main__item--9 {
+  background: #CC6699;
+  width: 50%;
+}
+
+.main__item--10 {
+  background: #339966;
+  width: 25%;
+}
+
+.main__item--11 {
+  background: #666699;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+
+  .main__item--2,
+  .main__item--3,
+  .main__item--4,
+  .main__item--5,
+  .main__item--6,
+  .main__item--7,
+  .main__item--8,
+  .main__item--10 {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .main__item--1,
+  .main__item--2,
+  .main__item--3,
+  .main__item--4,
+  .main__item--5,
+  .main__item--6,
+  .main__item--7,
+  .main__item--8,
+  .main__item--9,
+  .main__item--10 {
+    width: 100%;
+  }
+}
+
+/* Footer */
+.footer__text {
+  padding: 35px 0 0;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+/* Footer  End*/
