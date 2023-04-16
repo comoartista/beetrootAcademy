@@ -26,9 +26,9 @@ body {
 }
 
 .container {
-  width: 1210px;
+  width: 1202px;
   max-width: 100%;
-  padding: 0 40px;
+  padding: 0 16px;
   margin: 0 auto;
 }
 
@@ -44,23 +44,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.header__btn {
-  padding: 10px 20px 10px;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 22px;
-  text-transform: uppercase;
-  color: var(--color-black);
-  background: var(--color-white);
-  border: 1px solid var(--color-black);
-}
-
-.header__btn:hover {
-  color: var(--color-white);
-  background-color: var(--color-blue);
-  border: 1px solid var(--color-blue);
 }
 
 .nav__list {
@@ -80,6 +63,23 @@ body {
 
 .nav__link:hover {
   color: var(--color-blue);
+}
+
+.header__btn {
+  padding: 10px 20px 10px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: var(--color-black);
+  background: var(--color-white);
+  border: 1px solid var(--color-black);
+}
+
+.header__btn:hover {
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  border: 1px solid var(--color-blue);
 }
 
 /* Header End*/
@@ -121,7 +121,10 @@ body {
 }
 
 .team__descr {
-  margin: 0 0 60px;
+  width: 570px;
+  max-width: 100%;
+
+  margin: 0 auto 60px auto;
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
@@ -209,3 +212,80 @@ body {
 }
 
 /* Footer end*/
+
+
+/*Burger menu*/
+
+.header__burger-menu {
+  position: relative;
+  background: #18B5DC;
+  padding: 10px;
+}
+
+/* Lines */
+.header__burger-lines,
+.header__burger-lines::before,
+.header__burger-lines::after {
+  background: var(--color-black);
+  display: block;
+  height: 2px;
+  width: 27px;
+  opacity: 1;
+  position: absolute;
+}
+
+.header__burger-lines::before,
+.header__burger-lines::after {
+  content: "";
+}
+
+/* Top */
+.header__burger-lines::before {
+  top: -10px;
+  left: 0;
+}
+
+/* Bottom */
+.header__burger-lines::after {
+  top: 10px;
+  left: 0;
+}
+
+/* Top */
+.header__burger-menu--close .header__burger-lines::before {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Middle */
+.header__burger-menu--close .header__burger-lines {
+  transform: rotate(-45deg);
+}
+
+/* Bottom */
+.header__burger-menu--close .header__burger-lines::after {
+  top: 0;
+  left: 0;
+  transform: rotate(90deg);
+  opacity: 0;
+  width: 0;
+}
+
+.nav__list {
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color: #18B5DC; */
+  width: 100%;
+  height: 100%;
+  display: none;
+
+}
+
+.header__burger-menu--close {}
+
+.overlay .nav__list {
+  display: flex;
+}
