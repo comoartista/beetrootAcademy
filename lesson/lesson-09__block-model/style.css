@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.row {
+  max-width: 500px;
+  background-color: gray;
+  padding: 20px;
+}
+
+.box {
+  background: red;
+  padding: 20px;
+  margin-bottom: 20px;
+  min-height: 80px;
+}
+
+.box:last-child {
+  margin-bottom: 0;
+}
+
+.box-1 {
+  height: 80px;
+  background-color: black;
+  margin-bottom: 20px;
+}
+
+.box-1:last-child {
+  margin-bottom: 0;
+}
