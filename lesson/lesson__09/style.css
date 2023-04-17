@@ -5,21 +5,26 @@
 }
 
 .wrapper {
-  background: grey;
-  width: 1000px;
-  height: 100vh;
-  padding: 20px;
-
-}
-
-.box {
-  background-image: red;
-  min-height: 200px;
+  max-width: 1339px;
   width: 100%;
 }
 
 .box1 {
-  background: black;
+  padding: 20px;
+  max-width: 1162px;
   width: 100%;
 
+  background: red;
+}
+
+.box3 {
+  display: inline-block;
+  padding: 30px;
+  height: 165px;
+  background: black;
+}
+
+.box4 {
+  height: 165px;
+  background: black;
 }
