@@ -143,6 +143,7 @@ body {
   height: 1px;
   background: #FFFFFF;
   transform: translateY(-50%);
+  z-index: 1;
 }
 
 /* Style Shopping List End */
