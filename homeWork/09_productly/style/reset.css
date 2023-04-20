@@ -27,6 +27,10 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+input {
+  outline: none;
+}
+
 input::-ms-clear {
   display: none;
 }

@@ -4,7 +4,7 @@
   --color-white: #ffffff;
   --color-black: #2F281E;
   --color-orange: #FF9900;
-  --color-orange-dark: #df8d00;
+  --color-orange-dark: #ffbb46;
   --color-gray: #BCD0E5;
   --color-brown: #544837;
 
@@ -21,6 +21,7 @@
   --font-text: 400 16px / 26px var(--font-main);
   --font-nav: 400 16px / 26px var(--font-main);
   --font-btn: 600 16px / 24px var(--font-second);
+
 }
 
 /* Variables End*/
@@ -166,6 +167,10 @@ body {
 /* Header Style End*/
 
 /* Hero Style */
+.hero {
+  margin: 50px 0 100px;
+}
+
 .hero__container {
   position: relative;
   height: 495px;
@@ -262,14 +267,16 @@ body {
 
 /* Footer Style */
 .footer {
-  height: 100%;
-  margin: 70px 0 70px;
+  padding: 70px 0 70px;
+  border-top: 1px solid var(--color-gray);
 }
 
 .footer__container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .footer__title {
@@ -293,18 +300,16 @@ body {
 
 /* Form Style */
 .form {
+  width: 340px;
   display: flex;
   flex-direction: column;
   gap: 25px;
-  height: 100%;
-  align-items: flex-start;
 }
 
 .form__input {
-  padding: 15px 0 15px 10px;
+  padding: 15px 118px 15px 10px;
   border: 1px solid var(--color-gray);
   border-radius: 4px;
-  /* width: 340px; */
 }
 
 .form__input::placeholder {
@@ -312,8 +317,12 @@ body {
   color: var(--color-gray);
 }
 
+.form__input:focus {
+  border: 1px solid var(--color-orange);
+}
+
 .form__button {
-  display: inline;
+  width: fit-content;
 }
 
 /* Footer Style End */
@@ -325,16 +334,13 @@ body {
 }
 
 @media (max-width: 960px) {
-  :root {
-    /* Fonts*/
-    --font--heading1: 700 44px / 54px var(--font-main);
-    --font--heading2: 700 36px / 44px var(--font-main);
-    --font--heading3: 600 22px / 27px var(--font-main);
 
-    --font-descr: 400 18px / 28px var(--font-main);
-    --font-text: 400 16px / 26px var(--font-main);
-    --font-nav: 400 16px / 26px var(--font-main);
-    --font-btn: 600 16px / 20px var(--font-main);
+  .header__nav {
+    display: none;
+  }
+
+  .header__btns-container {
+    gap: 10px;
   }
 
   .hero__title {
@@ -347,54 +353,111 @@ body {
 
   .section__container {
     flex-direction: column;
-    gap: 70px;
+    gap: 50px;
   }
 
-  @media (max-width: 768px) {
-    :root {
-      /* Fonts*/
-      --font--heading1: 700 36px / 46px var(--font-main);
-      --font--heading2: 700 28px / 38px var(--font-main);
-      --font--heading3: 600 20px / 25px var(--font-main);
+  .section__img {
+    max-width: 400px;
+    width: 100%;
+  }
+}
 
-      --font-descr: 400 18px / 28px var(--font-main);
-      --font-text: 400 16px / 26px var(--font-main);
-      --font-nav: 400 16px / 26px var(--font-main);
-      --font-btn: 600 16px / 20px var(--font-main);
-    }
+@media (max-width: 768px) {
 
-    .section {
-      margin: 0 0 190px;
-    }
+  .hero {
+    margin: 0 0 270px;
+  }
 
-    .hero__container {
-      margin: 0 auto;
-      text-align: center;
-    }
+  .hero__container {
+    margin: 0 auto;
+    text-align: center;
+  }
 
-    .hero__content {
-      top: 0;
-      transform: translateY(0%);
-      position: static;
-      width: 100%;
-    }
+  .hero__content {
+    top: 0;
+    transform: translateY(0%);
+    position: static;
+    width: 100%;
+  }
 
-    .hero__img {
-      margin: 0 0 30px;
-      top: 0;
-      transform: translateY(0%);
-      position: static;
-      width: 80%;
-    }
+  .hero__img {
+    margin: 0 0 30px;
+    top: 0;
+    transform: translateY(0%);
+    position: static;
+    width: 80%;
+  }
 
-    .hero__btn {
-      position: static;
-      display: block;
-      margin: 0 auto;
-    }
+  .hero__btn {
+    position: static;
+    display: block;
+    margin: 0 auto;
+  }
 
-    .section__item {
-      flex: 0 1 100%;
-    }
+  .features {
+    padding: 0 0 20px;
+  }
+
+  .section {
+    margin: 0 0 50px;
+    /* padding: 0 0 50px; */
+  }
+
+  .section__item {
+    flex: 0 1 100%
+  }
+
+  /* Common Section Style for 3 blocks*/
+  .section__container {
+    gap: 30px;
+  }
+
+  .section__title {
+    margin: 0 0 10px;
+  }
+
+  .section__text {
+    margin: 0 0 30px;
+  }
+
+  .section__item-title {
+    margin: 0 0 5px;
+  }
+
+  .section__item-text {
+    margin: 0 0 20px;
+  }
+
+  .product-managers__item {
+    margin: 0 0 20px;
+  }
+
+  .product-managers__icon {
+    margin: 0 10px 0 0;
+  }
+
+  .footer {
+    padding: 50px 0 50px;
+  }
+
+  .footer__container {
+    flex-direction: column;
+  }
+
+  .footer__logo {
+    margin: 0 0 20px;
+  }
+
+  .footer__title {
+    margin: 0 0 10px;
+  }
+
+  .footer__list {
+    gap: 10px;
+    margin: 0 0 20px;
+  }
+
+  .form {
+    gap: 20px;
   }
 }
