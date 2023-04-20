@@ -58,7 +58,8 @@ ul li {
 }
 
 img {
-  vertical-align: top;
+  width: 100%;
+  display: block;
 }
 
 h1,
