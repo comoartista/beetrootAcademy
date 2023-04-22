@@ -20,13 +20,13 @@
     <header class="header">
       <div class="container header__container">
         <div class="header__content">
-          <div class="eng">ENG</div>
-          <ul class="breadcrumb__container">
-            <li class="breadcrumb__item">
-              <a href="" class="breadcrumb__link link">Documentation</a>
+          <a href="#" class="header__link link">ENG</a>
+          <ul class="header__nav-container">
+            <li class="header__item">
+              <a href="" class="header__link link">Documentation</a>
             </li>
-            <li class="breadcrumb__item">
-              <a href="" class="breadcrumb__link link">Who's using</a>
+            <li class="header__item">
+              <a href="" class="header__link link">Who's using</a>
             </li>
           </ul>
         </div>
@@ -47,23 +47,24 @@
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a class="nav__link" href="#">Introduction</a>
+                <a class="link" href="#introduction">Introduction</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">Core components</a>
+                <a class="link" href="#coreComponents">Core components</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">react fundamentals</a>
+                <a class="link" href="#reactFundamentals">react fundamentals</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">handling text input</a>
+                <a class="link" href="#handlingTextInput">handling text input</a>
               </li>
             </ul>
           </nav>
         </aside>
         <section class="section documentation">
-          <div class="documentation__item">
-            <h2 class="documentation__title"> Introduction
+          <img class="documentation__img-bg" src="./images/bg-picture.png" alt="img">
+          <div id="introduction" class="documentation__item">
+            <h2 class="documentation__title">Introduction
               <span class="documentation__undertitle">Chapter 1</span>
             </h2>
             <p class="documentation__text">
@@ -74,7 +75,7 @@
               Native Components, React, and more!
             </p>
           </div>
-          <div class="documentation__item">
+          <div id="coreComponents" class="documentation__item">
             <h2 class="documentation__title">core components
               <span class="documentation__undertitle">Chapter 2</span>
             </h2>
@@ -86,12 +87,14 @@
             You can learn more about React in the next section. But first, let’s cover how components work in React
             Native.
           </div>
-          <div class="documentation__item">
+          <div id="reactFundamentals" class="documentation__item">
             <h2 class="documentation__title">react fundamentals
               <span class="documentation__undertitle">Chapter 3</span>
             </h2>
             <p class="documentation__text">
-              React Native runs on React, a popular open source library for building user interfaces with JavaScript. To
+              React Native runs on <a class="documentation__link" href="#">React</a>, a popular open source library for
+              building user
+              interfaces with JavaScript. To
               make the most of React Native, it helps to understand React itself. This section can get you started or
               can
               serve as a refresher course.
@@ -103,20 +106,23 @@
             <p class="documentation__text"><b>+ JSX.</b> React and React Native use JSX, a syntax that lets you write
               elements
               inside JavaScript like so:
-              <code><Text>Hello, I am your cat!</Text></code>
+              <span class="documentation__text--bg">&lt;Hello, I am your cat!&gt;</span>.
             </p>
             <p class="documentation__text">The React docs have <a class="documentation__link" href="">a comprehensive
                 guide to JSX</a> you can refer to learn even
-              more. Because JSX is JavaScript, you can use variables inside it. Here you are declaring a name for the
+              more. Because JSX is JavaScript, you can use variables inside it. Here you are declaring a <span
+                class="documentation__text--bg">name</span> for the
               cat,
-              name, and embedding it with curly braces inside <code><Text></Text></code> </p>
-            <p class="documentation__text">+ props. Props is short for “properties”. </p>
-            <p class="documentation__text">+ state. While you can think of props as arguments you use to configure how
+              name, and embedding it with curly braces inside <span class="documentation__text--bg">&lt;Text&gt;</span>.
+            </p>
+            <p class="documentation__text"><b>+ props.</b> Props is short for “properties”. </p>
+            <p class="documentation__text"><b>+ state.</b> While you can think of props as arguments you use to
+              configure how
               components render, state is like a component’s personal data storage. State is useful for handling data
               that
               changes over time or that comes from user interaction. State gives your components memory!</p>
           </div>
-          <div class="documentation__item">
+          <div id="handlingTextInput" class="documentation__item">
             <h2 class="documentation__title"> handling text input
               <span class="documentation__undertitle">Chapter 4</span>
             </h2>
