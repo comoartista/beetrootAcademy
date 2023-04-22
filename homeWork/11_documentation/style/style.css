@@ -1,0 +1,58 @@
+:root {
+  --color-black: #000000;
+  --color-grey: #BDBDBD;
+
+  --font-main: 'PT Sans', sans-serif;
+  --font-secondary: 'Francois One', sans-serif;
+  --text-font: 400 28px / 48px var(--font-main);
+  --font-title: 400 36px / 48px var(--font-secondary);
+}
+
+body {
+  font-family: var(--font-main);
+  font: var(--text-font);
+  color: var(--color-black);
+}
+
+.container {
+  max-width: 1232px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.link {
+  color: var(--color-black);
+}
+
+/* Header style start */
+.header {
+  padding: 13px 0 13px;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__content {
+  display: flex;
+  gap: 50px;
+}
+
+.breadcrumb__container {
+  display: flex;
+  gap: 28px;
+}
+
+/* Header style end */
+
+.main {
+  margin: 70px 0 0;
+  display: flex;
+  gap: 30px;
+}
+
+.aside {
+  width: 385px;
+  flex-shrink: 0;
+}
