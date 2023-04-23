@@ -10,9 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
-  <title>Documentation</title>
+  <title>Who’s using</title>
   <link rel="stylesheet" href="./style/reset.css">
-  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="./style/cards.css">
 </head>
 
 <body>
@@ -41,103 +41,76 @@
         </a>
       </div>
     </header>
-    <div class="container">
-      <main class="main">
-        <aside class="aside">
-          <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a id="link" class="link" href="#introduction">Introduction</a>
-              </li>
-              <li class="nav__item">
-                <a id="link" class="link" href="#coreComponents">Core components</a>
-              </li>
-              <li class="nav__item">
-                <a id="link" class="link" href="#reactFundamentals">react fundamentals</a>
-              </li>
-              <li class="nav__item">
-                <a id="link" class="link" href="#handlingTextInput">handling text input</a>
-              </li>
-            </ul>
-          </nav>
-        </aside>
-        <section class="section documentation">
-          <img class="documentation__img-bg" src="./images/bg-picture.png" alt="img">
-          <div id="introduction" class="documentation__item">
-            <h2 class="documentation__title">Introduction
-              <span class="documentation__undertitle">Chapter 1</span>
-            </h2>
-            <p class="documentation__text">
-              Welcome to the very start of your React Native journey! If you're looking for environment setup
-              instructions, they've moved to <a class="documentation__link" href="#">their own section</a> . Continue
-              reading for an introduction to
-              the documentation,
-              Native Components, React, and more!
-            </p>
+    <section class="cards">
+      <div class="container">
+        <h3 class="cards__title">Who’s using</h3>
+        <div class="cards__container-item">
+          <div class="cards__item">
+            <div class="cards__side cards__side--front">
+              <img src="./images/logo__facebook--black.svg" alt="img">
+            </div>
+            <div class="cards__side cards__side--back">
+              <img src="./images/logo__facebook--white.svg" alt="img">
+            </div>
           </div>
-          <div id="coreComponents" class="documentation__item">
-            <h2 class="documentation__title">core components
-              <span class="documentation__undertitle">Chapter 2</span>
-            </h2>
-            <p class="documentation__text"></p>
-            React Native is an open source framework for building Android and iOS applications using React and the app
-            platform’s native capabiles. With React Native, you use JavaScript to access your platform’s APIs as well as
-            to describe the appearance and behavior of your UI using React components: <i>bundles of reusable, nestable
-              code</i>.
-            You can learn more about React in the next section. But first, let’s cover how components work in React
-            Native.
+          <div class="cards__item">
+            <div class="cards__side cards__side--front">
+              <img src="./images/logo__instagram--black.svg" alt="img">
+            </div>
+            <div class="cards__side cards__side--back">
+              <img src="./images/logo__instagram--white.svg" alt="img">
+            </div>
           </div>
-          <div id="reactFundamentals" class="documentation__item">
-            <h2 class="documentation__title">react fundamentals
-              <span class="documentation__undertitle">Chapter 3</span>
-            </h2>
-            <p class="documentation__text">
-              React Native runs on <a class="documentation__link" href="#">React</a>, a popular open source library for
-              building user
-              interfaces with JavaScript. To
-              make the most of React Native, it helps to understand React itself. This section can get you started or
-              can
-              serve as a refresher course.
-            </p>
-            <p class="documentation__text">We’re going to cover the core concepts behind React:</p>
-            <p class="documentation__text"><b>+ components.</b> The rest of this introduction to React uses cats in its
-              examples:
-              friendly, approachable creatures that need names and a cafe to work in.</p>
-            <p class="documentation__text"><b>+ JSX.</b> React and React Native use JSX, a syntax that lets you write
-              elements
-              inside JavaScript like so:
-              <span class="documentation__text--bg">&lt;Hello, I am your cat!&gt;</span>.
-            </p>
-            <p class="documentation__text">The React docs have <a class="documentation__link" href="">a comprehensive
-                guide to JSX</a> you can refer to learn even
-              more. Because JSX is JavaScript, you can use variables inside it. Here you are declaring a <span
-                class="documentation__text--bg">name</span> for the
-              cat,
-              name, and embedding it with curly braces inside <span class="documentation__text--bg">&lt;Text&gt;</span>.
-            </p>
-            <p class="documentation__text"><b>+ props.</b> Props is short for “properties”. </p>
-            <p class="documentation__text"><b>+ state.</b> While you can think of props as arguments you use to
-              configure how
-              components render, state is like a component’s personal data storage. State is useful for handling data
-              that
-              changes over time or that comes from user interaction. State gives your components memory!</p>
+          <div class="cards__item">
+            <div class="cards__side cards__side--front">
+              <img src="./images/logo__shopify--black.svg" alt="img">
+            </div>
+            <div class="cards__side cards__side--back">
+              <img src="./images/logo__shopify--white.svg" alt="img">
+            </div>
           </div>
-          <div id="handlingTextInput" class="documentation__item">
-            <h2 class="documentation__title"> handling text input
-              <span class="documentation__undertitle">Chapter 4</span>
-            </h2>
-            <p class="documentation__text">TextInput is a Core Component that allows the user to enter text. It has an
-              <i>onChangeText</i> prop that takes a function to be called every time the text changed, and an
-              onSubmitEditing
-              prop that takes a function to be called when the text is submitted.
-            </p>
-            <p class="documentation__text">For example, let's say that as the user types, you're translating their words
-              into a different language. In this new language, every single word is written the same way: 🍕. So the
-              sentence "Hello there Bob" would be translated as "🍕 🍕".</p>
+          <div class="cards__item">
+            <div class="cards__side cards__side--front">
+              <img src="./images/logo__skype--black.svg" alt="img">
+            </div>
+            <div class="cards__side cards__side--back">
+              <img src="./images/logo__skype--white.svg" alt="img">
+            </div>
           </div>
-        </section>
-      </main>
-    </div>
+          <div class="cards__item">
+            <div class="cards__side cards__side--front">
+              <img src="./images/logo__pinterest--black.svg" alt="img">
+            </div>
+            <div class="cards__side cards__side--back">
+              <img src="./images/logo__pinterest--white.svg" alt="img">
+            </div>
+          </div>
+          <div class="cards__item">
+            <div class="cards__side cards__side--front">
+              <img src="./images/logo__wix--black.svg" alt="img">
+            </div>
+            <div class="cards__side cards__side--back">
+              <img src="./images/logo__wix--white.svg" alt="img">
+            </div>
+          </div>
+          <div class="cards__item">
+            <div class="cards__side cards__side--front">
+              <img src="./images/logo__saleforce--black.svg" alt="img">
+            </div>
+            <div class="cards__side cards__side--back">
+              <img src="./images/logo__saleforce--white.svg" alt="img">
+            </div>
+          </div>
+          <div class="cards__item">
+            <div class="cards__side cards__side--front">
+              <img src="./images/logo__soundcloud--black.svg" alt="img">
+            </div>
+            <div class="cards__side cards__side--back">
+              <img src="./images/logo__soundcloud--white.svg" alt="img">
+            </div>
+          </div>
+        </div>
+    </section>
   </div>
 </body>
 
