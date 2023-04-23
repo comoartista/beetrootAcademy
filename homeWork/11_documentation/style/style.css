@@ -1,8 +1,8 @@
 :root {
+  --color-white: #ffffff;
   --color-black: #000000;
   --color-grey: #BDBDBD;
   --color-grey-2: #DADADA;
-
   --font-main: 'PT Sans', sans-serif;
   --font-secondary: 'Francois One', sans-serif;
   --text-font: 400 28px / 48px var(--font-main);
@@ -20,12 +20,6 @@ body {
   font-family: var(--font-main);
   font: var(--text-font);
   color: var(--color-black);
-}
-
-.wrapper {
-  /* overflow: hidden; */
-  contain: paint;
-  /* position: relative; */
 }
 
 .container {
@@ -46,17 +40,16 @@ body {
   opacity: .7;
 }
 
-
-.wrapper {}
-
 /* Global style End */
 
 /* Header style start */
+
 .header {
   padding: 13px 0 13px;
-  background-color: var(--color-grey);
   position: sticky;
-  /* margin: 0 0 70px; */
+  top: 0;
+  width: 100%;
+  background: var(--color-white);
 }
 
 .header__container {
@@ -110,7 +103,6 @@ body {
 
 /* Main style End*/
 
-
 /* Styled Aside */
 .aside {
   width: 385px;
@@ -119,7 +111,7 @@ body {
 
 .nav {
   position: sticky;
-  top: 70px;
+  top: 120px;
   left: 0;
 }
 
@@ -148,23 +140,16 @@ body {
 
 /* Styled Aside End */
 
-.main {
-  position: relative;
-
-}
-
 /* Styled Section */
 .documentation {
   margin-top: 20px;
+  z-index: -1;
 }
 
 .documentation__img-bg {
-  position: sticky;
-  top: 130px;
-  right: 130px;
-  /* top: -8px;
-  right: -235px; */
-  /* width: 760px; */
+  position: absolute;
+  top: 154px;
+  right: -240px;
   z-index: -1;
 }
 
