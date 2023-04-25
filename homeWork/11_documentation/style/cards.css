@@ -159,9 +159,6 @@ body {
 
 .cards__side--front {
   background: var(--color-grey-3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* Rotation cards */
@@ -177,7 +174,5 @@ body {
 .cards__item:hover .cards__side--back {
   transform: rotateX(0deg);
 }
-
-
 
 /* Section Cards style End*/

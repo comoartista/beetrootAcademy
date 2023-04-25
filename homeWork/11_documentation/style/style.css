@@ -46,8 +46,9 @@ body {
 
 .header {
   padding: 13px 0 13px;
-  position: sticky;
   top: 0;
+  left: 0;
+  position: fixed;
   width: 100%;
   background: var(--color-white);
 }
@@ -107,6 +108,7 @@ body {
 .aside {
   width: 385px;
   flex-shrink: 0;
+  position: relative;
 }
 
 .nav {
@@ -144,6 +146,7 @@ body {
 .documentation {
   margin-top: 20px;
   z-index: -1;
+  padding: 200px 0 0 0;
 }
 
 .documentation__img-bg {
