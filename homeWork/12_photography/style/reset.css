@@ -1,4 +1,4 @@
-* {
+/* * {
   padding: 0px;
   margin: 0px;
   border: 0px;
@@ -54,9 +54,7 @@ ul li {
 }
 
 img {
-  /* vertical-align: top; */
-  width: 100%;
-  display: block;
+  vertical-align: top;
 }
 
 h1,
@@ -67,4 +65,4 @@ h5,
 h6 {
   font-weight: inherit;
   font-size: inherit;
-}
+} */

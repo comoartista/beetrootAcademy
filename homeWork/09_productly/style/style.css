@@ -99,6 +99,44 @@ body {
   border: 1px solid var(--color-orange);
 }
 
+.burger-menu {
+  background: orangered;
+  width: 35px;
+  height: 30px;
+  position: relative;
+}
+
+.line--top,
+.line--middle,
+.line--bottom {
+  width: 35px;
+  height: 2px;
+  background: var(--color-black);
+  position: absolute;
+  left: 0;
+}
+
+.line--top {
+  top: 0;
+}
+
+.line--middle {
+  /* top: 50%;
+  transform: translateY(-50%); */
+  top: 14px;
+}
+
+.line--bottom {
+  bottom: 0;
+}
+
+.line--top {
+  transform: rotate(45deg);
+  top: 14px;
+}
+
+.open {}
+
 /* Global End*/
 
 /* Header Style */
