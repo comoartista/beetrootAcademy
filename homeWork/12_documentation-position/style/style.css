@@ -145,7 +145,6 @@ body {
 /* Styled Section */
 .documentation {
   margin-top: 20px;
-  z-index: -1;
   padding: 150px 0 0 0;
 }
 
