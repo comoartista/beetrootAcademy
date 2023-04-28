@@ -10,8 +10,7 @@
 
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-gray: rgba(224, 224, 224, 0.5);
-  --color-gray-1: rgba(224, 224, 224);
+  --color-gray: #E0E0E0;
 }
 
 /* Variables End*/
@@ -71,10 +70,12 @@ img {
   z-index: 1;
   transition: all .2s ease;
   visibility: hidden;
+  opacity: .5;
 }
 
 .icon:hover {
-  background: var(--color-gray-1);
+  background: var(--color-gray);
+  opacity: 1;
 }
 
 .icon__heart {
