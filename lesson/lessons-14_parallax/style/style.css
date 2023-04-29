@@ -1,0 +1,60 @@
+.wrapper {
+  /* overflow: hidden; */
+  contain: paint;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body {
+  color: #fff;
+  background: #000;
+}
+
+.title {
+  margin: 400px 0 0;
+}
+
+.text {
+  width: 500px;
+}
+
+.planet {
+  max-width: 1669px;
+  position: absolute;
+  right: -540px;
+  bottom: -530px;
+  z-index: -1;
+}
+
+.cursor {
+  max-width: 419px;
+  position: absolute;
+  right: -17px;
+  bottom: -55px;
+}
+
+.doodle-1,
+.doodle-2,
+.doodle-3 {
+  max-width: 236px;
+  position: absolute;
+}
+
+.doodle-1 {
+  bottom: 498px;
+  right: 775px;
+}
+
+.doodle-2 {
+  bottom: 143px;
+  right: 814px;
+}
+
+.doodle-3 {
+  bottom: -42px;
+  right: 902px
+}
