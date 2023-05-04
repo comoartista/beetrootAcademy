@@ -34,13 +34,12 @@ body {
 
 .dashboard {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 25px;
 }
 
 .sidebar {
   padding: 30px 0 30px 0;
-  /* flex: 1 0 220px; */
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   transition: .2s ease;
   height: 100vh;
@@ -49,7 +48,6 @@ body {
 .categories {
   margin: 0 auto;
   display: block;
-
 }
 
 .heading__text {
@@ -144,17 +142,12 @@ body {
 
 .menu-categories__icon {
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
 }
 
 .categories__title-wrapper {
   position: relative;
   padding: 10px 30px 10px 30px;
-
 }
-
-
 
 .menu-categories__text {
   display: none;
