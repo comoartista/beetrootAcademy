@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700&family=Inter:wght@400;500;600&display=swap"
+  rel="stylesheet">
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+<link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container header-container">
+        <a class="logo" href="#">
+          <img src="./images/logo.svg" alt="logo">
+        </a>
+        <div class="menu-burger">
+          <span class="line line-top"></span>
+          <span class="line line-middle"></span>
+          <span class="line line-bottom"></span>
+        </div>
+
+        <!-- <div class="menu">
+          <nav class="menu__nav">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#">Blog</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Speakers</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Agenda</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">FAQ</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="btn header__btn">Register</button>
+        </div>
+      </div> -->
+    </header>
+
+    <section class="hero">
+      <div class="container hero__container">
+        <img class="logo__event" src="./images/logo_finmill’21.svg" alt="logo conference">
+        <p class="hero__date">June 14, 2021</p>
+        <h1 class="hero__title heading-1">
+          <span class="hero__title--width">Fix your broken</span> <span class="color--violet">relationship</span> with
+          <span class="color--green">money</span>
+        </h1>
+        <p class="hero__text">Stop hustling yourself into breakdown, stop wasting time by managing money poorly. Let's
+          stop the grind,
+          together.</p>
+        <button class="btn hero__btn">Register for free</button>
+      </div>
+      <div class="hero__hand-left">
+        <img src="./images/hand-left.png" alt="">
+      </div>
+      <div class="hero__hand-right">
+        <img src="./images/hand-right.png" alt="">
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container">
+        <div class="about__container">
+          <div class="about__item">
+            <h2 class="heading-2">The financial system is broken.</h2>
+            <p class="about__text">The responsibility to make the right financial decisions unfairly rests on our own
+              shoulders.
+              We are a platform empowering millenials to manage their money through content, events, and community.</p>
+            <a class="btn btn--green about__btn" href="#">Read Our Blog</a>
+          </div>
+          <div class="about__item">
+            <h4 class="heading-4 about__title">About</h4>
+            <img class="about__logo logo__event" src="./images/logo_finmill’21.svg" alt="logo event">
+            <p class="about__text">A annual virtual workshop on personal finance for millenials, breaking down the
+              jargons
+              and give you actionable advice to manage your money.
+              This year, it’ll take place virtually.</p>
+            <p>Event starts in</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="control-money">
+      <div class="container">
+        <h2 class="heading-2 control-money__title">You're <span class="color--violet">taking over the world,</span>
+          don't forget to <span class="color--green"> take control of your money</span> <span
+            class="color--violet">.</span></h2>
+        <div class="control-money__text">Managing your money can be tricky, but we make it actionable and
+          approachable.It all comes down to doing four key things, and they’re not that hard</div>
+      </div>
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <h4 class="slider-item__title">
+              Spend well
+            </h4>
+            <img class="slider-item__img" src="./images/illustration__spend-well.png" alt="img">
+            <a class="btn btn--green slider__btn" href="#">Learn More</a>
+          </div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <section class="speakers">
+      <div class="container">
+        <h2 class="speakers__title">Meet our speakers</h2>
+        <div class="speakers__row">
+          <div class="speakers__item">
+            <div class="speakers__item-img">
+              <img src="./images/speakers-1.png" alt="img">
+            </div>
+            <p class="speakers__item-title">Ali Abdaal</p>
+            <p class="speakers__item-position">Youtuber</p>
+          </div>
+
+          <div class="speakers__item">
+            <div class="speakers__item-img">
+              <img src="./images/speakers-2.png" alt="img">
+            </div>
+            <p class="speakers__item-title">Kunal Shah</p>
+            <p class="speakers__item-position">Founder, CRED</p>
+          </div>
+
+          <div class="speakers__item">
+            <div class="speakers__item-img">
+              <img src="./images/speakers-3.png" alt="img">
+            </div>
+            <p class="speakers__item-title">Rachana Ranade</p>
+            <p class="speakers__item-position">Educator & Youtuber</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 2,
+      // centeredSlides: true,
+      spaceBetween: 30,
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+
+</html>
