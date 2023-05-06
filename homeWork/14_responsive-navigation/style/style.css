@@ -19,11 +19,15 @@
   --color-blue-darken: #161D31;
 }
 
+
+/* Global Style*/
 body {
   font-family: var(--font-main);
   color: var(--color-gray-dark);
 }
 
+
+/* Global Style End*/
 .logo {
   padding: 10px 30px 10px 30px;
   display: flex;
@@ -31,14 +35,7 @@ body {
   gap: 20px;
 }
 
-.dashboard {
-  display: flex;
-  justify-content: space-between;
-}
-
-.dashboard__img {
-  max-width: 100%;
-}
+/* Sidebar Style*/
 
 .sidebar {
   padding: 30px 0 30px 0;
@@ -46,6 +43,7 @@ body {
   transition: .2s ease;
   height: 100vh;
   z-index: 1;
+  transition: all .2s ease;
 }
 
 .categories {
@@ -57,6 +55,7 @@ body {
   display: none;
 }
 
+/* Sidebar Hover*/
 .sidebar:hover {
   flex: 1 0 220px;
 }
@@ -127,7 +126,6 @@ body {
   font: var(--font-link);
   color: var(--color-gray-middle);
   text-transform: uppercase;
-
 }
 
 .menu-categories__item {
@@ -160,6 +158,7 @@ svg {
   color: var(--color-gray-dark);
 }
 
+/* Notification Style*/
 .noti {
   position: relative;
 }
@@ -173,9 +172,22 @@ svg {
   border-radius: 100%;
   font: var(--font-noti);
   color: var(--color-gray-dark);
+}
+
+.noti--green::after {
   background: var(--color-green);
 }
 
+.noti--red::after {
+  background: var(--color-red);
+  color: var(--color-white);
+}
+
+.noti--yellow::after {
+  background: var(--color-yellow);
+}
+
+/* Sidebar Style End*/
 
 
 /*Header*/
@@ -227,16 +239,34 @@ svg {
   gap: 56px;
 }
 
+/*Header End*/
+
+/*Dashboard*/
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard__img {
+  max-width: 100%;
+}
+
+/*Dashboard End*/
+
+
 @media (max-width: 991.98px) {
   .quick-setting {
     gap: 30px;
+  }
+
+  .lang {
+    gap: 10px;
   }
 }
 
 @media (max-width: 767.98px) {
 
   .quick-panel__list,
-  .lang,
   .setting__list {
     gap: 15px;
   }
