@@ -1,0 +1,45 @@
+$color-yellow: #FFCC00;
+
+.container {
+  max-width: 1202px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+.head {
+  &__subtitle {
+    font: 500 18px / 24px $font-main;
+  }
+  &__title {
+    font: 900 18px / 24px $font-secondary;
+    color: $color-yellow;
+  }
+}
+
+.divider {
+  width: 20px;
+}
+.slider {
+  &__row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 170px;
+  }
+  &__item {
+    &-img {
+      width: 400px;
+    }
+  }
+  &__title {}
+  &__subtitle {}
+  &__icon-row {
+    display: flex;
+  }
+  &__text {}
+  &__btn {}
+}
