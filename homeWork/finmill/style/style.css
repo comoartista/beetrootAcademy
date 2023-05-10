@@ -254,18 +254,167 @@ body {
 }
 
 .about__event-title {
-  font: var(--font-text-small-b);
+  margin-top: 10px;
+  font: var(--font-bold);
 }
 
-.about__event-inform {
+.about__event-timer {
   padding: 10px 20px;
-  margin: 24px auto 0;
+  margin: 8px auto 0;
   max-width: 272px;
   font: var(--font-bold);
   background: var(--color-yellow);
   border-radius: 100px;
 }
 
-
-
 /* Style About End */
+
+@media (min-width: 576px) {
+  .about__text {
+    max-width: 550px;
+    margin: 24px auto 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    margin-top: 75px;
+  }
+
+  .hero__title {
+    max-width: 422px;
+  }
+
+  .hero__text {
+    max-width: 439px;
+  }
+
+  .hero__btn {
+    margin: 32px auto 227px;
+  }
+
+  .hero__hand-left {
+    top: -100px;
+  }
+
+  .hero__hand-right {
+    top: 184px;
+  }
+
+  .about__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .about__bg {
+    display: block;
+    width: 312px;
+    position: absolute;
+    top: -112px;
+    left: -90px;
+    opacity: 1;
+    animation: fadeIn 2s ease forwards;
+  }
+
+  .about__container {
+    padding: 44px 30px;
+    display: flex;
+    gap: 30px;
+  }
+
+  .about__item {
+    text-align: left;
+  }
+
+  .about__item:first-child {
+    margin-bottom: 0px;
+  }
+
+  .about__title {
+    text-align: left;
+  }
+
+  .about__btn {
+    margin: 24px 0 0;
+  }
+
+  .about__logo-event {
+    margin: 8px 0 41px 0;
+  }
+
+  .about__event-timer {
+    margin: 8px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  :root {
+    --font-h1: 600 58px / 64px var(--font-main);
+    --font-h2: 600 48px / 56px var(--font-main);
+    --font-h4: 600 34px / 44px var(--font-main);
+
+    --font-accent: 600 20px / 24px var(--font-main);
+  }
+
+  .hero__logo-event {
+    width: 220px;
+  }
+
+  .hero__date {
+    margin-top: 7px;
+  }
+
+  .hero__title {
+    margin: 32px auto 0;
+    max-width: 620px;
+  }
+
+  .hero__text {
+    margin: 24px auto 0;
+    max-width: 570px;
+  }
+
+  .hero__btn {
+    margin: 24px auto 280px;
+  }
+
+  .about__container {
+    padding: 44px 63px;
+    gap: 95px;
+  }
+
+  .about__logo-event {
+    margin: 14px 0 40px 0;
+    width: 204px;
+  }
+}
+
+@media (min-width: 1144px) {
+  .hero__title {
+    max-width: 810px;
+  }
+
+  .hero__text {
+    max-width: 450px;
+  }
+
+  .hero__hand-left {
+    width: 198px;
+    left: 0;
+    bottom: 173px;
+  }
+
+  .hero__hand-right {
+    width: 264px;
+    right: 0;
+    bottom: -75px;
+  }
+
+  .about__event {
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+    gap: 10px;
+  }
+}
