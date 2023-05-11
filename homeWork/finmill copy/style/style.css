@@ -397,15 +397,6 @@
 /* Style Our-partners */
 
 /* Style Our-partners End */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
 
 
 
@@ -470,16 +461,7 @@
     max-width: 920px;
   }
 
-  .workshop__bg-icon {
-    display: block;
-    width: 164px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    opacity: 1;
-    animation: fadeIn 2s ease forwards;
-    z-index: -1;
-  }
+  .workshop__bg-icon {}
 
   .previous__text {
     max-width: 688px;

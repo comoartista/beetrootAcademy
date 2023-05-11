@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+input {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  outline: none;
+  background: transparent;
+}
+
+/*  якщо під інпутом є лайбл - до всіх приміняються зміни:
+input:focus~.form__label {
+  color: red;
+} */
+
+.wrapper {
+  width: 300px;
+}
+
+.form {
+  padding: 20px 40px;
+  border: 1px solid blue;
+  border-radius: 30px;
+}
+
+.form__item {
+  border: 1px solid;
+  margin-bottom: 30px;
+  width: 100%;
+  border-radius: 30px;
+  position: relative;
+}
+
+.form__label {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  z-index: 1;
+  transition: .2s linear;
+}
+
+input:focus~.form__label {
+  color: red;
+  left: 5px;
+  top: -10px;
+  background: white;
+  padding: 0 5px;
+  scale: .9;
+}
+
+.form__check {
+  display: flex;
+  align-items: flex-start;
+}
+
+.form__check input {
+  width: 10px;
+}
+
+.blue {
+  color: blue;
+}
+
+.form__check input:checked+.blue {
+  color: red;
+}
+
+section {
+  border: 1px solid;
+  padding: 60px 0;
+}
+
+.baner {
+  background: red;
+  padding: 60px 0;
+}
+
+section+.baner {
+  padding: 20px 0;
+
+}

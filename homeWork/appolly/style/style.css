@@ -1,0 +1,74 @@
+.hero__wrapper {
+  background: url(../images/bg.jpg) no-repeat center / cover;
+  padding-bottom: 220px;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.social {
+  background: #5851EA;
+}
+
+.social__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social__contacts {
+  display: flex;
+  gap: 20px;
+}
+
+.social__contact {
+  display: flex;
+  gap: 10px;
+}
+
+
+.header__container {
+  background: white;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero {
+  margin: 220px 0 0;
+  position: relative;
+}
+
+.hero__content {
+  padding: 40px 30px;
+  background: white;
+  max-width: 570px;
+}
+
+.hero__download-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.hero__download-icon {
+  width: 150px;
+}
+
+.hero__img {
+  max-width: 646px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
