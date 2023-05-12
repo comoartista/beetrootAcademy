@@ -48,3 +48,33 @@ var swiper = new Swiper(".mySwiper", {
 
 },
 });
+
+
+
+var swiperPrevious = new Swiper(".mySwiper-previous", {
+  slidesPerView: 1,
+  spaceBetween: 24,
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+    clickable: true,
+  },
+
+  breakpoints: {
+  576: {
+    slidesPerView: 1,
+    spaceBetween: 0,
+  },
+
+  768: {
+    slidesPerView: 2,
+    spaceBetween: 32,
+  },
+
+  1144: {
+    slidesPerView: 3,
+    spaceBetween: 32,
+  },
+
+},
+});

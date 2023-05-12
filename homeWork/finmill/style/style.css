@@ -13,7 +13,7 @@
 
   --color-yellow: #FCDD9A;
   --color-accentPeach: #EFBE97;
-  --color-accentLight: #FFFAF6;
+  --color-accentLight: #fcf2ea;
 
   --font-main: 'Recoleta', cursive;
   --font-secondary: 'Inter', sans-serif;
@@ -34,7 +34,7 @@
   --font-bold: 700 16px / 22px var(--font-secondary);
 
 
-  --font-accent: 600 14px / 24px var(--font-main);
+  --font-accent: 600 16px / 26px var(--font-main);
 }
 
 /* Global Style*/
@@ -422,6 +422,58 @@ body {
 
 /* Workshop Style End */
 
+/* Previous Style */
+
+
+.previous {
+  padding-top: 76px;
+  background: var(--color-white);
+}
+
+.previous__text {
+  margin: 16px auto;
+  text-align: center;
+}
+
+.mySwiper-previous {
+  margin-top: 48px;
+}
+
+.previous__slide {
+  background: var(--color-accentLight);
+  border-radius: 24px;
+  padding: 32px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.previous__slide-text {
+  font: var(--font-accent);
+}
+
+.previous__slide-person {
+  /* margin-top: 30px; */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.previous__slide-avatar {
+  width: 47px;
+}
+
+.previous__slide-name {
+  font: var(--font-body-medium);
+}
+
+.previous__slide-position {
+  font: var(--font-body-small);
+}
+
+/* Previous Style End */
 
 @keyframes fadeIn {
   from {
@@ -455,6 +507,12 @@ body {
     justify-content: center;
     flex-wrap: wrap;
   }
+
+  .previous__text {
+    max-width: 700px;
+    margin: 15px auto 0;
+  }
+
 }
 
 @media (min-width: 768px) {
@@ -517,6 +575,9 @@ body {
     justify-content: space-between;
   }
 
+  .previous__slide {
+    height: 240px;
+  }
 
 }
 
@@ -731,6 +792,14 @@ body {
   .workshop__row {
     margin: 40px auto 0;
     max-width: 920px;
+  }
+
+  .mySwiper-previous {
+    margin-top: 56px;
+  }
+
+  .previous__slide {
+    min-height: 280px;
   }
 }
 
