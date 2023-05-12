@@ -78,3 +78,18 @@ var swiperPrevious = new Swiper(".mySwiper-previous", {
 
 },
 });
+
+const accordionItems = document.querySelectorAll('.accordion__item');
+
+accordionItems.forEach(item => {
+  const header = item.querySelector('.accordion__header');
+  const content = item.querySelector('.accordion__content');
+  const arrow = item.querySelector('.accordion__icon');
+
+
+  header.addEventListener('click', () => {
+    content.classList.toggle('active');
+    arrow.classList.toggle('active');
+
+  });
+});

@@ -473,6 +473,70 @@ body {
   font: var(--font-body-small);
 }
 
+.faq {
+  margin-top: 56px;
+  position: relative;
+}
+
+.faq__img-left {
+  position: absolute;
+  width: 346px;
+  left: -180px;
+  top: 242px;
+  z-index: -1;
+}
+
+.faq__img-right {
+  position: absolute;
+  width: 400px;
+  right: -230px;
+  top: -140px;
+  z-index: -1;
+}
+
+
+.accordion {
+  margin-top: 32px;
+  width: 100%;
+}
+
+.accordion__item {
+  padding: 24px;
+  margin-bottom: 24px;
+  background: var(--color-white);
+  border-radius: 24px;
+}
+
+.accordion__header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.accordion__icon {
+  width: 35px;
+}
+
+.accordion__content {
+  margin-top: 8px;
+  display: none;
+  transition: .2s linear;
+  font: var(--font-body-medium);
+
+}
+
+.accordion__content.active {
+  display: block;
+  transform: translateY(0px);
+}
+
+.accordion__icon.active {
+  transform: scale(-1);
+}
+
+
 /* Previous Style End */
 
 @keyframes fadeIn {
@@ -853,5 +917,14 @@ body {
   .control-money__slide-img--3 {
     width: 349px;
     top: 97px;
+  }
+
+  .faq {
+    margin-top: 120px;
+  }
+
+  .accordion {
+    margin: 48px auto 0;
+    width: 922px;
   }
 }
