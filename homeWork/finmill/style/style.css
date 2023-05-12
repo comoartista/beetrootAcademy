@@ -147,6 +147,26 @@ body {
   top: 22px;
 }
 
+
+/* Swiper Style */
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 0 0 60px;
+}
+
+
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  background: var(--color-yellow);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-yellow);
+}
+
 /* Header End */
 
 
@@ -272,36 +292,10 @@ body {
 
 /* Style About End */
 
-/* Swiper Style */
-html,
-body {
-  /* position: relative;
-  height: 100%; */
-}
-
-
-.swiper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  padding: 0 0 60px;
-}
-
-
-.swiper-pagination-bullet {
-  width: 16px;
-  height: 16px;
-  background: var(--color-yellow);
-}
-
-.swiper-pagination-bullet-active {
-  background: var(--color-yellow);
-}
-
 /* Control-Money */
 
 .control-money {
-  padding: 50px 0 76px;
+  padding: 50px 0 0;
   background: var(--color-white);
 }
 
@@ -344,6 +338,41 @@ body {
 
 /* Control-Money End */
 
+/* Speakers Style */
+.speakers {
+  padding-top: 75px;
+  background: var(--color-white);
+}
+
+.speakers__row {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+}
+
+.speakers__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.speakers__item-img {
+  max-width: 208px;
+
+}
+
+.speakers__item-title {
+  margin-top: 16px;
+}
+
+.speakers__item-position {
+  font: var(--font-body-medium);
+}
+
+/* Speakers End */
+
 
 @keyframes fadeIn {
   from {
@@ -370,6 +399,12 @@ body {
   .control-money__text {
     max-width: 700px;
     margin: 15px auto 0;
+  }
+
+  .speakers__row {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
@@ -427,6 +462,8 @@ body {
   .about__event-timer {
     margin: 8px 0;
   }
+
+
 }
 
 @media (min-width: 992px) {
@@ -501,8 +538,6 @@ body {
     margin-top: 16px;
     font: var(--font-body-medium);
     color: var(--color-accentLight);
-
-    /* max-width: 260px; */
   }
 
   .control-money__slide-img {
@@ -555,6 +590,15 @@ body {
 
   .control-money__btn {
     display: none;
+  }
+
+  .speakers__row {
+    margin-top: 48px;
+    gap: 77px;
+  }
+
+  .speakers__item-title {
+    margin-top: 40px;
   }
 }
 
