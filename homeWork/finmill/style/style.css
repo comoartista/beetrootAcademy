@@ -157,8 +157,13 @@ body.locked {
 
 .menu {
   display: flex;
-  gap: 30px;
+  align-items: center;
+  gap: 24px;
+}
 
+.menu__list {
+  display: flex;
+  gap: 24px;
 }
 
 .menu__item {
@@ -231,16 +236,25 @@ body.locked {
     width: 100vw;
     flex-direction: column;
     pointer-events: all;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
     z-index: 2;
     animation: fade 0.1s linear;
   }
 
-  .menu__item {
-    width: 90%;
-    padding: 0 20px;
+  .menu__list {
+    flex-direction: column;
+    gap: 50px;
+    margin: 120px 0 0 32px;
+    width: calc(100% - 64px);
   }
+
+  .menu__btn {
+    margin: 0 0 24px 32px;
+    width: calc(100% - 64px);
+  }
+
+  .menu__item {}
 
   .menu__item::after {
     position: absolute;
