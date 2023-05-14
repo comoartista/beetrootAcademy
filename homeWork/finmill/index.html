@@ -20,36 +20,31 @@
 
 <body>
   <div class="wrapper">
-    <header class="header">
-      <div class="container header-container">
-        <a class="logo" href="#">
-          <img src="./images/logo.svg" alt="logo">
-        </a>
-        <div class="menu-burger">
-          <span class="line line-top"></span>
-          <span class="line line-middle"></span>
-          <span class="line line-bottom"></span>
+    <header>
+      <!-- Navbar -->
+      <div class="header">
+        <div class="container">
+          <div class="navbar">
+            <div class="logo">
+              <a href="#">
+                <img src="./images/logo.svg" alt="logo">
+              </a>
+            </div>
+            <nav>
+              <ul class="menu">
+                <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Blog</a></li>
+                <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Speakers</a></li>
+                <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Agend</a></li>
+                <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>FAQ</a></li>
+              </ul>
+            </nav>
+
+            <button class="burger">
+              <span></span>
+            </button>
+          </div>
         </div>
-        <!-- <div class="menu">
-        <nav class="menu__nav">
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__link" href="#">Blog</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Speakers</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Agenda</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">FAQ</a>
-            </li>
-          </ul>
-        </nav>
-        <button class="btn header__btn">Register</button>
       </div>
-    </div> -->
     </header>
 
     <div class="bg-gradient__wrapper">
@@ -534,6 +529,120 @@
         </div>
       </div>
     </section>
+
+    <section class="our-partners">
+      <div class="container">
+        <h2 class="our-partners__title h2">Our Partners</h2>
+        <div class="our-patners__row">
+          <img class="our-patners__logo" src="./images/logo-cred.svg" alt="logo cred">
+          <img class="our-patners__logo" src="./images/logo-fi.svg" alt="logo fi">
+          <img class="our-patners__logo" src="./images/logo-zerodha.svg" alt="logo zerodha">
+          <img class="our-patners__logo" src="./images/logo-ind-money.svg" alt="logo ind money">
+        </div>
+      </div>
+    </section>
+    <section class="cta">
+      <div class="cta__left-img">
+        <img src="./images/cta-left.png" alt="icon">
+      </div>
+      <div class="cta__bottom-img">
+        <img src="./images/cta-bottom.png" alt="icon">
+      </div>
+      <div class="container">
+        <h2 class="cta__title h2">If you are here,
+          you have already
+          taken the first step!</h2>
+        <p class="cta__text">Get ready to make some money moves.</p>
+        <button class="btn cta__btn">Register for free</button>
+      </div>
+    </section>
+
+
+    <section class="subscribe">
+      <div class="container">
+        <h2 class="subscribe__title h2">
+          You and your money deserves some love!
+        </h2>
+        <p class="subscribe__text">
+          Helping you take action on your financial journey. Take the first step towards owning your money by signing up
+          for our newsletter.
+        </p>
+        <form class="subscribe__form">
+          <input class="subscribe__input" type="email" placeholder="Enter your email address">
+          <button class="subscribe__btn btn btn--green">Subscribe</button>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__logo">
+          <img src="./images/logo-footer.svg" alt="logo">
+        </div>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="#" class="footer__link">About Us</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">FAQ</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Contact Us</a>
+          </li>
+        </ul>
+        <div class="footer__copy">
+          Copyright © 2021. finmil. All rights reserved.
+        </div>
+
+        <ul class="footer__icon">
+          <li class="footer__icon-item">
+            <a class="footer__icon-link" href="#">
+              <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.99654 4.04127H11.0059V0.541705C10.6592 0.494017 9.467 0.386719 8.07854 0.386719C5.18149 0.386719 3.19693 2.20895 3.19693 5.55812V8.64042H0V12.5527H3.19693V22.3966H7.11653V12.5536H10.1842L10.6711 8.64134H7.11561V5.94605C7.11653 4.81529 7.421 4.04127 8.99654 4.04127V4.04127Z"
+                  fill="currentColor" />
+              </svg>
+            </a>
+          </li>
+
+          <li class="footer__icon-item">
+            <a class="footer__icon-link" href="#">
+              <svg width="28" height="23" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M27.657 2.99447C26.6488 3.43672 25.5745 3.72986 24.4545 3.87219C25.6067 3.18425 26.4862 2.10319 26.8996 0.800163C25.8253 1.44066 24.6392 1.89308 23.3752 2.14555C22.3551 1.05941 20.9013 0.386719 19.3153 0.386719C16.2382 0.386719 13.7609 2.88433 13.7609 5.94619C13.7609 6.38675 13.7982 6.81036 13.8897 7.21364C9.2689 6.98828 5.18021 4.77364 2.43351 1.4C1.95398 2.23197 1.6727 3.18425 1.6727 4.20939C1.6727 6.13428 2.66395 7.84058 4.14151 8.82844C3.24854 8.8115 2.37251 8.55225 1.63034 8.14389C1.63034 8.16083 1.63034 8.18286 1.63034 8.20489C1.63034 10.9058 3.55693 13.1493 6.08334 13.6661C5.63093 13.7898 5.13784 13.8491 4.62612 13.8491C4.27029 13.8491 3.91107 13.8287 3.57387 13.7542C4.29401 15.9553 6.33751 17.5735 8.76734 17.626C6.87634 19.1053 4.47532 19.9965 1.87604 19.9965C1.42023 19.9965 0.983065 19.9762 0.545898 19.9203C3.00793 21.508 5.92576 22.4145 9.07235 22.4145C19.3 22.4145 24.8917 13.9423 24.8917 6.59855C24.8917 6.35286 24.8832 6.11564 24.8713 5.88011C25.9744 5.09728 26.9013 4.11958 27.657 2.99447Z"
+                  fill="currentColor" />
+              </svg>
+            </a>
+          </li>
+
+          <li class="footer__icon-item">
+            <a class="footer__icon-link" href="#">
+              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M7.65936 0.386719H15.9775C19.8053 0.386719 22.9094 3.49079 22.9094 7.31854V15.6367C22.9094 19.4645 19.8053 22.5685 15.9775 22.5685H7.65936C3.83161 22.5685 0.727539 19.4645 0.727539 15.6367V7.31854C0.727539 3.49079 3.83161 0.386719 7.65936 0.386719ZM15.9776 20.4889C18.6533 20.4889 20.8298 18.3123 20.8298 15.6366V7.31843C20.8298 4.64275 18.6533 2.46615 15.9776 2.46615H7.65938C4.9837 2.46615 2.80711 4.64275 2.80711 7.31843V15.6366C2.80711 18.3123 4.9837 20.4889 7.65938 20.4889H15.9776Z"
+                  fill="currentColor" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M6.27344 11.4771C6.27344 8.41462 8.75642 5.93164 11.8189 5.93164C14.8814 5.93164 17.3644 8.41462 17.3644 11.4771C17.3644 14.5396 14.8814 17.0226 11.8189 17.0226C8.75642 17.0226 6.27344 14.5396 6.27344 11.4771ZM8.35305 11.477C8.35305 13.3874 9.90855 14.9429 11.819 14.9429C13.7294 14.9429 15.2849 13.3874 15.2849 11.477C15.2849 9.56524 13.7294 8.01112 11.819 8.01112C9.90855 8.01112 8.35305 9.56524 8.35305 11.477Z"
+                  fill="currentColor" />
+                <circle cx="17.7799" cy="5.51628" r="0.738932" fill="currentColor" />
+              </svg>
+            </a>
+          </li>
+
+          <li class="footer__icon-item">
+            <a class="footer__icon-link" href="#">
+              <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M18.9033 0C20.2593 0 21.3633 1.104 21.3633 2.472V24L18.7833 21.72L17.3313 20.376L15.7953 18.948L16.4313 21.168H2.82328C1.46728 21.168 0.363281 20.064 0.363281 18.696V2.472C0.363281 1.104 1.46728 0 2.82328 0H18.9033V0ZM14.2713 15.672C16.9233 15.588 17.9433 13.848 17.9433 13.848C17.9433 9.984 16.2153 6.852 16.2153 6.852C14.4873 5.556 12.8433 5.592 12.8433 5.592L12.6753 5.784C14.7153 6.408 15.6633 7.308 15.6633 7.308C14.4153 6.624 13.1913 6.288 12.0513 6.156C11.1873 6.06 10.3593 6.084 9.62728 6.18L9.42328 6.204C9.00328 6.24 7.98328 6.396 6.69928 6.96C6.25528 7.164 5.99128 7.308 5.99128 7.308C5.99128 7.308 6.98728 6.36 9.14728 5.736L9.02728 5.592C9.02728 5.592 7.38328 5.556 5.65528 6.852C5.65528 6.852 3.92728 9.984 3.92728 13.848C3.92728 13.848 4.93528 15.588 7.58728 15.672C7.58728 15.672 8.03128 15.132 8.39128 14.676C6.86728 14.22 6.29128 13.26 6.29128 13.26L6.62728 13.464L6.67528 13.5L6.72228 13.527L6.73628 13.533L6.78328 13.56C7.08328 13.728 7.38328 13.86 7.65928 13.968C8.15128 14.16 8.73928 14.352 9.42328 14.484C10.3233 14.652 11.3793 14.712 12.5313 14.496C13.0953 14.4 13.6713 14.232 14.2713 13.98C14.6913 13.824 15.1593 13.596 15.6513 13.272C15.6513 13.272 15.0513 14.256 13.4793 14.7C13.8393 15.156 14.2713 15.672 14.2713 15.672V15.672ZM8.69128 10.068C8.00728 10.068 7.46728 10.668 7.46728 11.4C7.46728 12.132 8.01928 12.732 8.69128 12.732C9.37528 12.732 9.91528 12.132 9.91528 11.4C9.92728 10.668 9.37528 10.068 8.69128 10.068ZM13.0713 10.068C12.3873 10.068 11.8473 10.668 11.8473 11.4C11.8473 12.132 12.3993 12.732 13.0713 12.732C13.7553 12.732 14.2953 12.132 14.2953 11.4C14.2953 10.668 13.7553 10.068 13.0713 10.068Z"
+                  fill="currentColor" />
+              </svg>
+            </a>
+          </li>
+
+
+
+        </ul>
+      </div>
+    </footer>
   </div>
 
   <!-- Swiper JS -->
