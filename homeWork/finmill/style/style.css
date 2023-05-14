@@ -57,6 +57,7 @@ body {
 
 .logo {
   width: 75px;
+  z-index: 3;
 }
 
 .h1 {
@@ -148,44 +149,27 @@ body.locked {
 }
 
 .navbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   padding: 20px 0;
 }
 
-.logo a {
-  color: white;
-}
-
 .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 30px;
+
 }
 
 .menu__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
 }
 
 .menu__item-link {
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  color: var(--color-darkBlue);
   display: flex;
   position: relative;
-  -webkit-transition: 0.5s color;
-  -o-transition: 0.5s color;
   transition: 0.5s color;
 }
 
@@ -197,14 +181,8 @@ body.locked {
   background: #131418;
   height: 1px;
   width: 100%;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
   transform: scale(0);
-  -webkit-transition: 0.5s -webkit-transform;
-  transition: 0.5s -webkit-transform;
-  -o-transition: 0.5s transform;
   transition: 0.5s transform;
-  transition: 0.5s transform, 0.5s -webkit-transform;
   display: none;
 }
 
@@ -213,8 +191,6 @@ body.locked {
 }
 
 .menu__item-link:hover:after {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
   transform: scale(1);
 }
 
@@ -239,7 +215,7 @@ body.locked {
 @media screen and (max-width: 991.98px) {
   .menu {
     position: fixed;
-    background: #131418;
+    background: var(--color-accentLight);
     left: 0;
     top: 0;
     height: 100vh;
@@ -248,63 +224,64 @@ body.locked {
   }
 
   .menu.active {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     left: 0;
     top: 0;
     height: 100vh;
     width: 100vw;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     pointer-events: all;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    align-items: flex-start;
     z-index: 2;
-    -webkit-animation: fade 0.1s linear;
     animation: fade 0.1s linear;
   }
 
+  .menu__item {
+    width: 90%;
+    padding: 0 20px;
+  }
+
+  .menu__item::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 50px;
+    background: var(--color-yellow);
+    z-index: 100;
+
+  }
+
+  .menu.active .menu__item-link {
+    font: var(--font-h1);
+  }
+
   .burger {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     position: relative;
-    height: 20px;
-    width: 30px;
+    height: 32px;
+    width: 32px;
+    background: transparent;
   }
 
   .burger.active:before {
-    background: #fefefe;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
+    background: var(--color-yellow);
     transform: rotate(45deg);
-    -webkit-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-    -o-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
     transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-    top: 8px;
+    top: 14px;
   }
 
   .burger.active:after {
-    background: #fefefe;
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
+    background: var(--color-yellow);
     transform: rotate(-45deg);
-    bottom: 10px;
-    -webkit-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-    -o-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+    bottom: 14px;
     transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
   }
 
   .burger.active span {
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
     transform: scale(0);
   }
 
@@ -312,11 +289,9 @@ body.locked {
   .burger:after {
     content: "";
     position: absolute;
-    height: 2px;
+    height: 4px;
     width: 100%;
-    background: #131418;
-    -webkit-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-    -o-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+    background: var(--color-yellow);
     transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
   }
 
@@ -330,16 +305,12 @@ body.locked {
 
   .burger span {
     position: absolute;
-    top: 9px;
+    top: 14px;
     right: 0;
     width: 100%;
-    background: #131418;
-    height: 2px;
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
+    background: var(--color-yellow);
+    height: 4px;
     transform: scale(1);
-    -webkit-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-    -o-transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
     transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
   }
 }
