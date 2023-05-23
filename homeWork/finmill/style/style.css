@@ -1019,22 +1019,47 @@ body.locked .overlay {
 
 .subscribe__form {
   margin: 32px auto 0;
-  max-width: 300px;
+  max-width: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border-radius: 100px;
+
+
+
 }
 
 .subscribe__input {
-  padding: 12px 55px;
+  padding: 24px 25px;
+  width: 100%;
+  background: var(--color-white);
   border-radius: 100px;
-  width: 300px;
+  box-shadow: -8px 10px 0px -6px rgba(228, 166, 116, 0.35);
+
+
+}
+
+.subscribe__input:focus {
+  outline: transparent;
 }
 
 .subscribe__input::placeholder {
   color: #C8C9CC;
+  font: var(--font-body);
+}
+
+.subscribe__input:focus::placeholder {
+  color: transparent;
 }
 
 .subscribe__btn {
   margin: 16px auto 0;
-  width: 300px;
+  width: fit-content;
+  position: absolute;
+  right: 10px;
+  top: -8px;
+  box-shadow: 0px 2px 6px rgba(112, 211, 181, 0.44);
+
 }
 
 
