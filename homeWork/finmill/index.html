@@ -20,16 +20,6 @@
 
 <body>
   <div class="wrapper">
-    <!-- Modal -->
-    <div class="modal__wrapper">
-      <div class="modal">
-        <div class="modal__close"> <img src="./img/cancel.svg" alt="cancel" width="10px" height="10px"></div>
-        <div class="modal__title"><span>Modal Title</span> </div>
-        <div class="modal__body">Modal Body</div>
-      </div>
-    </div>
-    <a href="#" class="btn modal__btn">Open modal</a>
-
     <header>
       <!-- Navbar -->
       <div class="header">
@@ -43,12 +33,13 @@
             <nav>
               <div class="menu">
                 <ul class="menu__list">
-                  <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Blog</a></li>
-                  <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Speakers</a></li>
-                  <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Agend</a></li>
-                  <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>FAQ</a></li>
+                  <li class="menu__item"><a href="#about" class="menu__item-link" data-scroll>About</a></li>
+                  <li class="menu__item"><a href="#speakers" class="menu__item-link" data-scroll>Speakers</a>
+                  </li>
+                  <li class="menu__item"><a href="#agenda" class="menu__item-link" data-scroll>Agenda</a></li>
+                  <li class="menu__item"><a href="#faq" class="menu__item-link" data-scroll>FAQ</a></li>
                 </ul>
-                <button class="btn menu__btn">Register</button>
+                <button id="modal__btn" class="btn menu__btn btn modal__btn">Register</button>
               </div>
             </nav>
 
@@ -60,7 +51,7 @@
       </div>
     </header>
 
-    <div class="bg-gradient__wrapper">
+    <div class="">
       <section class="hero">
         <div class="container hero__container ">
           <div class="hero__logo-event">
@@ -74,7 +65,7 @@
           <p class="hero__text">Stop hustling yourself into breakdown, stop wasting time by managing money poorly. Let's
             stop the grind,
             together.</p>
-          <button class="btn hero__btn">Register for free</button>
+          <button id="modal__btn" class="hero__btn btn">Register for free</button>
         </div>
         <div class="hero__hand-left">
           <img src="./images/hand-left.png" alt="">
@@ -84,7 +75,7 @@
         </div>
       </section>
 
-      <section class="about">
+      <section id="about" class="about">
         <div class="container">
           <div class="about__container">
             <div class="about__img">
@@ -186,7 +177,7 @@
         </div>
       </div>
     </section>
-    <section class="speakers">
+    <section id="speakers" class="speakers">
       <div class="container">
         <h2 class="speakers__title h2">Meet our speakers</h2>
         <div class="speakers__row">
@@ -355,7 +346,7 @@
         </div>
       </div>
     </section>
-    <section class="workshop">
+    <section id="agenda" class="workshop">
       <div class="workshop__bg-icon">
         <img src="./images/workshop-icon.png" alt="img">
       </div>
@@ -485,7 +476,7 @@
         </div>
       </div>
     </section>
-    <section class="faq">
+    <section id="faq" class="faq">
       <div class="faq__img-left">
         <img src="./images/faq-left.png" alt="">
       </div>
@@ -731,6 +722,25 @@
       </div>
     </footer>
   </div>
+  <!-- Modal -->
+  <div class="modal__wrapper">
+    <div class="modal">
+      <div class="modal__close">
+        <img src="./images/cancel.svg" alt="cancel" width="10px" height="10px">
+      </div>
+      <h3 class="modal__title h3">Conference registration</h3>
+      <div class="modal__body">
+        <form action="" class="modal__form">
+          <input class="modal__form-input" type="email" placeholder="Email">
+          <input class="modal__form-input" type="text" placeholder="Name">
+          <button class="btn modal__btn">To register</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay"></div>
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
