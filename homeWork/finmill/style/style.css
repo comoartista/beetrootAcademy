@@ -52,7 +52,7 @@ body.locked {
   overflow: hidden;
 }
 
-body.locked .overlay {
+/* body.locked .overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -60,7 +60,7 @@ body.locked .overlay {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 9;
-}
+} */
 
 .wrapper {
   overflow: hidden;
@@ -130,10 +130,22 @@ body.locked .overlay {
   background: var(--color-turquoise);
 }
 
+/*********************/
+/***** ANIMATION *****/
+/*********************/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
 
-/***************/
+  to {
+    opacity: 1;
+  }
+}
+
+/******************/
 /***** HEADER *****/
-/***************/
+/******************/
 
 .header {
   background-color: transparent;
@@ -691,46 +703,19 @@ body.locked .overlay {
   border-radius: 24px;
 }
 
-.accordion__header {
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 25px;
-}
-
-.accordion__icon {
-  width: 35px;
-}
-
-.accordion__content {
-  margin-top: 8px;
-  display: none;
-  transition: .2s linear;
-  font: var(--font-body-medium);
-}
-
-.accordion__content.active {
-  display: block;
-  transform: translateY(0px);
-}
-
-.accordion__icon.active {
-  transform: scale(-1);
-}
-
 .accordion__item-trigger {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 
-.trigger__img {
+.accordion__img {
   position: relative;
   margin-left: auto;
+  transition: .2s ease;
 }
 
-.accordion__item-active .trigger__img {
+.accordion__item-active .accordion__img {
   transform: scale(-1);
   transition: 0.1s transform ease;
 }
@@ -739,7 +724,7 @@ body.locked .overlay {
   margin-top: 24px;
   opacity: 0;
   display: none;
-  animation: fade 0.3s ease;
+  animation: fadeIn 2s ease forwards;
 }
 
 .accordion__item-active .accordion__content {
@@ -747,7 +732,10 @@ body.locked .overlay {
   display: block;
 }
 
-/* Style Our-partners */
+/************************/
+/***** OUR PARTNERS *****/
+/************************/
+
 .our-partners {
   background: var(--color-accentLight);
 }
@@ -760,9 +748,20 @@ body.locked .overlay {
   flex-wrap: wrap;
 }
 
-.our-patners__logo {
-  height: 84px;
-  width: 200px;
+.our-patners__logo-cred {
+  width: 136px;
+}
+
+.our-patners__logo-fi {
+  width: 46px;
+}
+
+.our-patners__logo-zerodha {
+  width: 206px;
+}
+
+.our-patners__logo-money {
+  width: 146px;
 }
 
 /***************/
@@ -802,7 +801,6 @@ body.locked .overlay {
 /*********************/
 /***** SUBSCRIBE *****/
 /*********************/
-
 .subscribe {
   position: relative;
   z-index: 1;
@@ -863,13 +861,11 @@ body.locked .overlay {
   right: 10px;
   top: -8px;
   box-shadow: 0px 2px 6px rgba(112, 211, 181, 0.44);
-
 }
 
 /******************/
 /***** FOOTER *****/
 /******************/
-
 .footer {
   padding: 52px 38px;
   background: var(--color-accentLight);
@@ -913,11 +909,9 @@ body.locked .overlay {
   color: var(--color-turquoise);
 }
 
-
 /*****************/
 /***** MODAL *****/
 /*****************/
-
 .modal {
   padding: 50px 30px;
   background: var(--color-accentLight);
@@ -975,17 +969,6 @@ body.locked .overlay {
 .modal__btn {
   display: inline-block;
   text-align: center;
-}
-
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 @media (min-width: 576px) {
@@ -1363,6 +1346,22 @@ body.locked .overlay {
 
   .previous__slide {
     min-height: 280px;
+  }
+
+  .our-patners__logo-cred {
+    width: 194px;
+  }
+
+  .our-patners__logo-fi {
+    width: 64px;
+  }
+
+  .our-patners__logo-zerodha {
+    width: 356px;
+  }
+
+  .our-patners__logo-money {
+    width: 220px;
   }
 
   .cta {
