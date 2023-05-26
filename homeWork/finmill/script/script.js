@@ -2,6 +2,8 @@ function burgerMenu() {
   const burger = document.querySelector('.burger')
   const menu = document.querySelector('.menu')
   const body = document.querySelector('body')
+  const btnRegister = document.querySelector('#modal__btn')
+
   burger.addEventListener('click', () => {
       if (!menu.classList.contains('active')) {
           menu.classList.add('active')
@@ -15,9 +17,12 @@ function burgerMenu() {
   })
 
   menu.addEventListener('click', () => {
-    menu.classList.remove('active')
-    burger.classList.remove('active')
-    body.classList.remove('locked')
+        // Перевіряємо, чи клік був на кнопці "Register"
+        if (!event.target.classList.contains('btn') || event.target.id !== 'modal__btn') {
+          menu.classList.remove('active');
+          burger.classList.remove('active');
+          body.classList.remove('locked');
+        }
   })
   // Вот тут мы ставим брейкпоинт навбара
   window.addEventListener('resize', () => {
@@ -136,19 +141,19 @@ function modal() {
     item.addEventListener('click', e => {
       e.preventDefault();
       modal.style.display = 'block';
-      body.classList.add('locked');
+      body.classList.add('locked-modal');
     })
   });
 
   closeModal.addEventListener('click', () => {
     modal.style.display = 'none';
-    body.classList.remove('locked');
+    body.classList.remove('locked-modal');
   })
 
   modal.addEventListener('click', e => {
     if (e.target === modal) {
       modal.style.display = 'none'
-      body.classList.remove('locked')
+      body.classList.remove('locked-modal')
     }
   })
   }

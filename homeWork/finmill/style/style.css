@@ -52,15 +52,15 @@ body.locked {
   overflow: hidden;
 }
 
-/* body.locked .overlay {
+body.locked-modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9;
-} */
+  z-index: 100;
+}
 
 .wrapper {
   overflow: hidden;
@@ -416,19 +416,44 @@ body.locked {
   margin: 32px auto 324px;
 }
 
-.hero__hand-left {
-  width: 183px;
+.hero__left-hand {
+  width: 181px;
   position: absolute;
-  top: 316px;
-  left: 0;
-  z-index: -1;
+  top: 356px;
+  left: -8px;
+  z-index: 0;
 }
+
 
 .hero__hand-right {
   width: 233px;
   position: absolute;
   top: 360px;
   right: 0;
+  z-index: -1;
+}
+
+.hero__left-hand {
+  width: 181px;
+  position: absolute;
+  top: 356px;
+  left: -8px;
+  z-index: 0;
+}
+
+.hero__left-dots {
+  position: absolute;
+  top: 474px;
+  left: -6px;
+  width: 78px;
+  z-index: 0;
+}
+
+.hero__left-bg {
+  position: absolute;
+  top: 350px;
+  left: -87px;
+  width: 186px;
   z-index: -1;
 }
 
@@ -921,7 +946,7 @@ body.locked {
   transform: translate(-50%, -50%);
   border-radius: 10px;
   display: none;
-  z-index: 10;
+  z-index: 101;
   display: none;
 }
 
@@ -981,7 +1006,7 @@ body.locked {
     max-width: 439px;
   }
 
-  .hero__hand-left {
+  .hero__left {
     top: 265px;
   }
 
@@ -1038,7 +1063,7 @@ body.locked {
     margin: 16px auto 200px;
   }
 
-  .hero__hand-left {
+  .hero__left {
     top: -100px;
   }
 
@@ -1457,16 +1482,30 @@ body.locked {
     padding-bottom: 72px;
   }
 
-  .hero__hand-left {
-    width: 355px;
-    left: 0;
-    top: -158px;
+  .hero__left-hand {
+    width: 353px;
+    top: -130px;
+    left: -18px;
   }
 
-  .hero__hand-right {
-    width: 418px;
-    right: 0;
-    top: 64px;
+  .hero__left .hero__left-hand:hover {
+    transform: rotate(5deg);
+  }
+
+  .hero__left-dots {
+    width: 151px;
+    top: 107px;
+    left: -12px;
+  }
+
+  .hero__left .hero__left-dots:hover {
+    transform: rotate(-5deg);
+  }
+
+  .hero__left-bg {
+    width: 362px;
+    top: -131px;
+    left: -181px;
   }
 
   .about__event {
