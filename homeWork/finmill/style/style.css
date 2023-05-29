@@ -216,18 +216,6 @@ body.locked-modal {
   z-index: 3;
 }
 
-@media (max-width: 1449.98px) {
-  .container {
-    max-width: 1200px;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .container {
-    max-width: 970px;
-  }
-}
-
 @media screen and (max-width: 991.98px) {
   .menu {
     position: fixed;
@@ -1486,20 +1474,22 @@ body.locked-modal {
     width: 353px;
     top: -130px;
     left: -18px;
+    transition: transform .5s ease-in-out;
   }
 
-  .hero__left .hero__left-hand:hover {
-    transform: rotate(5deg);
+  .hero__left-hand:hover {
+    transform: rotate(4deg);
   }
 
   .hero__left-dots {
     width: 151px;
     top: 107px;
     left: -12px;
+    transition: transform .8s ease-in-out;
   }
 
-  .hero__left .hero__left-dots:hover {
-    transform: rotate(-5deg);
+  .hero__left-hand:hover+.hero__left-dots {
+    transform: translate(10px, -20px);
   }
 
   .hero__left-bg {
