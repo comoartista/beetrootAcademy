@@ -69,7 +69,7 @@ body.locked-modal {
 .container {
   margin: 0 auto;
   padding: 0 20px;
-  max-width: 1480px;
+  max-width: 1152px;
 }
 
 .pt {
@@ -1498,7 +1498,7 @@ body.locked-modal {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
 
   .pt {
     padding-top: 72px;
@@ -1512,7 +1512,8 @@ body.locked-modal {
     width: 353px;
     top: -130px;
     left: -18px;
-    transition: transform .5s ease-out;
+    transition: transform 0.5s cubic-bezier(0.4, 0.1, 0.2, 1);
+    z-index: 0;
   }
 
   .hero__left-hand:hover {
@@ -1523,12 +1524,13 @@ body.locked-modal {
     width: 151px;
     top: 107px;
     left: -12px;
-    transition: transform .8s ease-out;
+    transition: transform 0.8s cubic-bezier(0.4, 0.1, 0.2, 1);
   }
 
   .hero__left-hand:hover+.hero__left-dots {
     transform: translate(10px, -20px);
   }
+
 
   .hero__left-bg {
     width: 362px;
@@ -1536,6 +1538,88 @@ body.locked-modal {
     left: -181px;
   }
 
+  .hero__right-hand {
+    width: 410px;
+    top: 138px;
+    right: -64px;
+    z-index: 0;
+    transition: transform 0.5s cubic-bezier(0.4, 0.1, 0.2, 1);
+  }
+
+  .hero__right-hand:hover {
+    transform: rotate(5deg);
+  }
+
+  .hero__right-bg {
+    width: 392px;
+    top: 90px;
+    right: -124px;
+    transform: rotate(-20deg);
+    transition: transform 0.5s cubic-bezier(0.4, 0.1, 0.2, 1);
+  }
+
+  .hero__right-hand:hover~.hero__right-bg {
+    transform: rotate(-25deg);
+  }
+
+  .hero__right-dots {
+    width: 153px;
+    top: 116px;
+    right: -27px;
+    transition: transform 0.5s cubic-bezier(0.4, 0.1, 0.2, 1);
+  }
+
+  .hero__right-hand:hover~.hero__right-dots {
+    transform: translateX(-5px);
+  }
+
+
+  .hero__right-coin1 {
+    width: 55px;
+    top: 266px;
+    right: 228px;
+    z-index: 1;
+    transition: transform 0.8s cubic-bezier(0.4, 0.1, 0.2, 1);
+  }
+
+  .hero__right-hand:hover~.hero__right-coin1 {
+    transform: translate(0, -16px) rotate(-20deg);
+  }
+
+  .hero__right-coin2 {
+    width: 34px;
+    top: 282px;
+    right: 203px;
+    z-index: 1;
+    transition: transform 0.8s cubic-bezier(0.4, 0.1, 0.2, 1) 0.1s;
+  }
+
+  .hero__right-hand:hover~.hero__right-coin2 {
+    transform: translate(0, -12px) rotate(-15deg);
+  }
+
+  .hero__right-coin3 {
+    width: 45px;
+    top: 246px;
+    right: 175px;
+    z-index: 1;
+    transition: transform 0.8s cubic-bezier(0.4, 0.1, 0.2, 1) 0.2s;
+  }
+
+  .hero__right-hand:hover~.hero__right-coin3 {
+    transform: translate(0, -20px) rotate(-25deg);
+  }
+
+  .hero__right-cart {
+    width: 206px;
+    top: 177px;
+    right: 78px;
+    transition: transform 0.8s cubic-bezier(0.4, 0.1, 0.2, 1);
+  }
+
+  .hero__right-hand:hover~.hero__right-cart {
+    transform: translate(4px, -4px) rotate(4deg);
+  }
 
 
   .about__event {
