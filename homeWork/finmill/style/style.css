@@ -404,45 +404,83 @@ body.locked-modal {
   margin: 32px auto 324px;
 }
 
-.hero__left-hand {
-  width: 181px;
+.hero__left-hand,
+.hero__left-dots,
+.hero__left-bg,
+.hero__right-coin1,
+.hero__right-coin2,
+.hero__right-coin3,
+.hero__right-hand,
+.hero__right-cart,
+.hero__right-dots,
+.hero__right-bg {
   position: absolute;
-  top: 356px;
-  left: -8px;
-  z-index: 0;
-}
-
-
-.hero__hand-right {
-  width: 233px;
-  position: absolute;
-  top: 360px;
-  right: 0;
   z-index: -1;
 }
 
 .hero__left-hand {
   width: 181px;
-  position: absolute;
   top: 356px;
   left: -8px;
-  z-index: 0;
 }
 
 .hero__left-dots {
-  position: absolute;
   top: 474px;
   left: -6px;
   width: 78px;
-  z-index: 0;
 }
 
 .hero__left-bg {
-  position: absolute;
   top: 350px;
   left: -87px;
   width: 186px;
-  z-index: -1;
+  z-index: -2;
+}
+
+.hero__right-coin1 {
+  width: 30px;
+  top: 472px;
+  right: 124px;
+}
+
+.hero__right-coin2 {
+  width: 18px;
+  top: 481px;
+  right: 110px;
+}
+
+.hero__right-coin3 {
+  width: 25px;
+  top: 459px;
+  right: 96px;
+}
+
+.hero__right-hand {
+  width: 225px;
+  top: 400px;
+  right: -38px;
+  z-index: -2;
+}
+
+.hero__right-cart {
+  width: 133px;
+  top: 411px;
+  right: 27px;
+  z-index: -3;
+}
+
+.hero__right-dots {
+  width: 84px;
+  top: 367px;
+  right: -12px;
+}
+
+.hero__right-bg {
+  width: 231px;
+  top: 358px;
+  right: -78px;
+  transform: rotate(-30deg);
+  z-index: -4;
 }
 
 /***********************/
@@ -999,7 +1037,7 @@ body.locked-modal {
   }
 
   .hero__hand-right {
-    top: 305px;
+    /* top: 305px; */
   }
 
   .about__text {
@@ -1056,7 +1094,7 @@ body.locked-modal {
   }
 
   .hero__hand-right {
-    top: 184px;
+    /* top: 184px; */
   }
 
   .about__container {
@@ -1474,7 +1512,7 @@ body.locked-modal {
     width: 353px;
     top: -130px;
     left: -18px;
-    transition: transform .5s ease-in-out;
+    transition: transform .5s ease-out;
   }
 
   .hero__left-hand:hover {
@@ -1485,7 +1523,7 @@ body.locked-modal {
     width: 151px;
     top: 107px;
     left: -12px;
-    transition: transform .8s ease-in-out;
+    transition: transform .8s ease-out;
   }
 
   .hero__left-hand:hover+.hero__left-dots {
@@ -1497,6 +1535,8 @@ body.locked-modal {
     top: -131px;
     left: -181px;
   }
+
+
 
   .about__event {
     padding: 10px 25px 0 0;
