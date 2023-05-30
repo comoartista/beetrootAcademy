@@ -49,8 +49,6 @@ function fixedHeader() {
 }
 window.addEventListener('scroll', fixedHeader)
 
-
-
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1.5,
   spaceBetween: 24,
@@ -78,8 +76,6 @@ var swiper = new Swiper(".mySwiper", {
 
 },
 });
-
-
 
 var swiperPrevious = new Swiper(".mySwiper-previous", {
   slidesPerView: 1,
@@ -109,7 +105,6 @@ var swiperPrevious = new Swiper(".mySwiper-previous", {
 },
 });
 
-
 // Accordion
 function accordion() {
   const items = document.querySelectorAll('.accordion__item-trigger')
@@ -129,9 +124,9 @@ function accordion() {
 }
 accordion();
 
-
 // Modal
 function modal() {
+  const overlay = document.querySelector('.overlay-wrapper');
   const triggerModal = document.querySelectorAll('#modal__btn');
   const modal = document.querySelector('.modal');
   const closeModal = document.querySelector('.modal__close');
@@ -141,20 +136,30 @@ function modal() {
     item.addEventListener('click', e => {
       e.preventDefault();
       modal.style.display = 'block';
-      body.classList.add('locked-modal');
+      modal.style.opacity = 1;
+      overlay.style.display = 'block';
+      body.classList.add('locked');
     })
   });
 
   closeModal.addEventListener('click', () => {
     modal.style.display = 'none';
-    body.classList.remove('locked-modal');
+    overlay.style.display = 'none';
+    body.classList.remove('locked');
   })
 
   modal.addEventListener('click', e => {
     if (e.target === modal) {
       modal.style.display = 'none'
-      body.classList.remove('locked-modal')
+      overlay.style.display = 'none';
+      body.classList.remove('locked')
     }
   })
+
+  overlay.addEventListener('click', () => {
+    modal.style.display = 'none';
+    overlay.style.display = 'none';
+    body.classList.remove('locked');
+  });
   }
 modal();
