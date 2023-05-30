@@ -156,10 +156,6 @@ function modal() {
     }
   })
 
-  overlay.addEventListener('click', () => {
-    modal.style.display = 'none';
-    overlay.style.display = 'none';
-    body.classList.remove('locked');
-  });
+
   }
 modal();
