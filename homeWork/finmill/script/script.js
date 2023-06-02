@@ -17,14 +17,12 @@ function burgerMenu() {
   })
 
   menu.addEventListener('click', () => {
-        // Перевіряємо, чи клік був на кнопці "Register"
         if (!event.target.classList.contains('btn') || event.target.id !== 'modal__btn') {
           menu.classList.remove('active');
           burger.classList.remove('active');
           body.classList.remove('locked');
         }
   })
-  // Вот тут мы ставим брейкпоинт навбара
   window.addEventListener('resize', () => {
       if (window.innerWidth > 991.98) {
           menu.classList.remove('active')
@@ -34,20 +32,6 @@ function burgerMenu() {
   })
 }
 burgerMenu()
-
-// Вызываем эту функцию, если нам нужно зафиксировать меню при скролле.
-function fixedHeader() {
-  const nav = document.querySelector('.header')
-
-  // тут указываем в пикселях, сколько нужно проскроллить что бы наше меню стало фиксированным
-  const breakpoint = 1
-  if (window.scrollY >= breakpoint) {
-      nav.classList.add('fixed')
-  } else {
-      nav.classList.remove('fixed')
-  }
-}
-window.addEventListener('scroll', fixedHeader)
 
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1.5,
@@ -97,11 +81,10 @@ var swiperPrevious = new Swiper(".mySwiper-previous", {
     spaceBetween: 32,
   },
 
-  1144: {
+  1200: {
     slidesPerView: 3,
     spaceBetween: 32,
   },
-
 },
 });
 
@@ -155,7 +138,5 @@ function modal() {
       body.classList.remove('locked')
     }
   })
-
-
   }
 modal();
