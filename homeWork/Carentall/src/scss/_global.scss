@@ -22,9 +22,13 @@
     }
 }
 
+html {
+    font: 400 1px / 1px $fontMain;
+}
 // Body & Locked
 body {
-    font-family: $fontMain;
+    font: 400 16rem / 24rem $fontMain;
+    color: $greyTextColor;
     &.locked {
         overflow: hidden;
     }
@@ -34,6 +38,11 @@ body {
     }
 }
 
+
+.h2 {
+    font: $h2;
+    color: $whiteColor;
+}
 // Animations
 // Fade
 @keyframes fade {

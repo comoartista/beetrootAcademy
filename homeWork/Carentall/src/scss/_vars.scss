@@ -9,7 +9,11 @@ $breakpoint768: 767.98 + px;
 $breakpoint480: 479.98 + px;
 
 // Colors
-$mainColor: #131418;
+$mainColor: #1D1E21;
+$blackColor: #1E242D;
+$whiteColor: #ffffff;
+$greyTextColor: #D9DBDE;
+
 
 // Burger Menu
 $burgerBreakpoint: $breakpoint992;
@@ -17,5 +21,10 @@ $burgerColor: #131418;
 $burgerActiveColor: #fefefe;
 
 // Fonts
-$fontMain: sans-serif;
+$fontMain: 'Montserrat', sans-serif;
 $fontSecondary: '';
+
+
+$h2: 400 40rem / 48rem $fontMain;
+$h4: 500 18rem / 18rem $fontMain;
+

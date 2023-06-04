@@ -73,8 +73,13 @@ h6 {
   padding: 0 20px;
 }
 
+html {
+  font: 400 1px/1px "Montserrat", sans-serif;
+}
+
 body {
-  font-family: sans-serif;
+  font: 400 16rem/24rem "Montserrat", sans-serif;
+  color: #D9DBDE;
 }
 
 body.locked {
@@ -83,6 +88,11 @@ body.locked {
 
 body.dark {
   background: #242424;
+}
+
+.h2 {
+  font: 400 40rem/48rem "Montserrat", sans-serif;
+  color: #ffffff;
 }
 
 @-webkit-keyframes fade {
@@ -192,6 +202,71 @@ body.dark {
   display: none;
   background: transparent;
   z-index: 3;
+}
+
+.footer {
+  padding: 235rem 0 32rem;
+  background: #1E242D;
+}
+
+.footer__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__list--row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+
+.footer__title {
+  color: #ffffff;
+}
+
+.footer__link {
+  color: #D9DBDE;
+}
+
+.pre-footer {
+  padding: 57rem 110rem 57rem;
+  background: -o-radial-gradient(73.36% 50.16%, 73.36% 994.87%, #66A2FB 0%, #3083FF 100%);
+  background: radial-gradient(73.36% 994.87% at 73.36% 50.16%, #66A2FB 0%, #3083FF 100%);
+  border-radius: 16rem;
+  position: relative;
+}
+
+.pre-footer__title {
+  max-width: 397rem;
+}
+
+.pre-footer__descr {
+  margin-top: 12rem;
+  color: #ffffff;
+}
+
+.pre-footer__apps {
+  margin-top: 40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12rem;
+}
+
+.pre-footer__app {
+  width: 130rem;
+}
+
+.pre-footer__img {
+  width: 437rem;
+  position: absolute;
+  right: 105rem;
+  bottom: 0;
 }
 
 @media (max-width: 1449.98px) {
