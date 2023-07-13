@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="login">
+    <h3>1: Зберігати імя Юзера якщо чекбокс == true</h3>
+    <input id="inp" class="login" type="text" placeholder="name">
+    <div>
+      <input id="checkbox" class="chack" type="checkbox">
+      Remeber me
+    </div>
+    <button class="btn">Login</button>
+  </div>
+
+
+
+  <script>
+    const btn = document.querySelector('.btn')
+    const inp = document.querySelector('#inp')
+    const checkbox = document.querySelector('#checkbox')
+
+
+    btn.onclick = () => {
+      if (checkbox.checked === true) {
+        localStorage.setItem('username', inp.value)
+      } else {
+        localStorage.removeItem('username', inp.value)
+      }
+      location.reload()
+    }
+
+    const saveUserName = localStorage.getItem('username')
+    if (saveUserName) {
+      inp.value = saveUserName
+      checkbox.checked = true
+    }
+  </script>
+</body>
+
+</html>

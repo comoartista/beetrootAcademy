@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="out"></div>
+  <script>
+    const out = document.querySelector('.out')
+    let obj = [
+      {
+        name: "Sascha",
+        age: 22
+      }
+    ]
+
+    //Функціональний компонент
+    function createUserFunction(item) {
+      let div = document.createElement('div')
+      div.innerHTML = item.name
+
+      return div
+    }
+
+    // out.append(createUserFunction(obj[0]))
+
+    //Класові компоненти
+    class createUser {
+      constructor(item) {
+        this.name = item.name,
+          this.age = item.age
+      }
+      createUser() {
+        let div = document.createElement('div')
+        div.innerHTML = this.name
+
+        return div
+      }
+    }
+
+    out.append(new createUser(obj[0].createUser()))
+
+    //Геттер і Сеттер
+    class GeterSeter {
+      constructor(item) {
+        this.name = item.name,
+          this.age = item.age
+      }
+
+      get Age() {
+        console.log(2023 - this.age)
+      }
+
+      set Age(newAge) {
+        this.age = newAge
+      }
+    }
+
+    let User = new GeterSeter(obj[0])
+    log
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .out {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      padding: 20px;
+      border: 1px solid;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="btn">Show all</button>
+  <div class="cardAdd"></div>
+  <div class="out"></div>
+  <script>
+
+    let movies = [
+      {
+        title: 'Titanic',
+        year: 1997,
+        img: 'https://media-cache.cinematerial.com/p/500x/esxytxmv/titanic-dvd-movie-cover.jpg?v=1456477874'
+      },
+      {
+        title: 'The Shawshank Redemption',
+        year: 1994,
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrfMibDMOrx_WAxT21jh7wEskCDGwY4nHndg&usqp=CAU'
+      },
+      {
+        title: 'Inception',
+        year: 2010,
+        img: 'https://mcdn.wallpapersafari.com/medium/48/56/DzmouM.jpg'
+      }
+    ];
+
+    let out = document.querySelector('.out')
+    let btn = document.querySelector('.btn')
+    let cardContainer = []
+    let cardAdd = document.querySelector('.cardAdd')
+
+
+    function showCart(item) {
+      // return `
+      // <div class="card">
+      //   <h2>${item.title}</h2>
+      //   <div>${item.year}</div>
+      // </div>
+      // `
+
+      let a = document.createElement('div')
+      a.classList.add('card')
+      let b = document.createElement('h2')
+      b.innerText = `Title: ${item.title}`
+
+      let c = document.createElement('div')
+      c.innerText = `Year: ${item.year}`
+
+      let d = document.createElement('img')
+      d.src = `${item.img}`
+      d.alt = `img ${item.title}`
+      d.width = '200'
+
+      let e = document.createElement('button')
+      e.innerText = 'Add'
+
+      a.append(d, b, c, e)
+
+      e.addEventListener('click', () => {
+        cardContainer.push(item)
+        console.log(cardContainer)
+
+        cardAdd.innerHTML = cardContainer.length
+      }, { 'once': true })
+
+
+      return a
+    }
+
+    btn.addEventListener('click', () => {
+      out.innerHTML = ''
+
+      movies.map(item => {
+        out.append(showCart(item))
+      })
+    })
+
+
+
+  </script>
+</body>
+
+</html>

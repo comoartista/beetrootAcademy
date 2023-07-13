@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="out"></div>
+
+
+  <script>
+    const out = document.querySelector('.out')
+
+    let obj = [
+      {
+        name: "sasha",
+        age: 44
+      },
+      {
+        name: "Sveta",
+        age: 19
+      }
+    ]
+
+
+    // function createUser(item) {
+    //   let div = document.createElement('div')
+    //   let p = document.createElement('p')
+    //   let p2 = document.createElement('p2')
+
+    //   p.innerHTML = item.name
+    //   p2.innerHTML = item.age
+
+
+    //   div.append(p, p2)
+
+    //   return div
+    // }
+
+    // out.append(createUser(obj[1]))
+
+    class createUser {
+      constructor(item) {
+        this.name = item.name,
+          this.age = item.age
+      }
+      createUser() {
+        let div = document.createElement('div')
+        let p = document.createElement('p')
+        let p2 = document.createElement('p2')
+
+        p.innerHTML = this.name
+        p2.innerHTML = this.age
+
+
+        div.append(p, p2)
+
+        return div
+      }
+
+      ageUser() {
+        if (this.age >= 18) {
+          console.log(true)
+        } else {
+          console.log(false);
+        }
+      }
+    }
+
+    obj.map(item => {
+      out.append(new createUser(item).createUser())
+      let a = new createUser(item).ageUser()
+      console.log(item);
+    })
+
+
+
+    // out.append(new createUser(obj[1]).createUser())
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

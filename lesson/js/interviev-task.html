@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>Task1: не більше до 10 і не менше 0</h2>
+  <button class="minus">-</button>
+  <span class="out">0</span>
+  <button class="plus">+</button>
+
+  <script>
+
+    const minus = document.querySelector('.minus')
+    const plus = document.querySelector('.plus')
+    const out = document.querySelector('.out')
+
+    let count = 0
+
+    minus.addEventListener('click', () => {
+      if (count > 0) {
+        count--
+        out.innerHTML = count
+      }
+    })
+
+    plus.addEventListener('click', () => {
+      if (count < 10) {
+        count++
+        out.innerHTML = count
+      }
+    })
+  </script>
+</body>
+
+</html>

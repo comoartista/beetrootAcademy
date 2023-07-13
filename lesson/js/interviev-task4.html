@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .red {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="text">
+  <button class="add">Add</button>
+  <ol>
+    <!-- <li>Carrot <input type="checkbox"></li> -->
+  </ol>
+  <div class="countOut">0</div>
+  <script>
+
+    const input = document.querySelector('input')
+    const btn = document.querySelector('.add')
+    const out = document.querySelector('ol')
+    const countOut = document.querySelector('.countOut')
+
+    let count = 0
+
+    btn.addEventListener('click', () => {
+
+      if (input.value) {
+        const li = document.createElement('li')
+        const checkbox = document.createElement('input')
+        checkbox.setAttribute('type', 'checkbox')
+        li.textContent = input.value
+
+        checkbox.addEventListener('change', () => {
+          if (checkbox.checked) {
+            li.classList.add('red')
+            countOut.textContent = --count
+          } else if (!checkbox.checked) {
+            li.classList.remove('red')
+            countOut.textContent = ++count
+          }
+          console.log(checkbox.checked)
+        })
+
+        countOut.textContent = ++count
+
+        li.append(checkbox)
+        out.append(li)
+        input.value = ''
+      }
+    })
+
+  </script>
+</body>
+
+</html>

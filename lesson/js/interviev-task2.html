@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h2>Task02: По кліку на "Del" видвляемо перший єлемент масив, по кліку на "Add" додаємо змінну res в кінець масиву
+  </h2>
+  <input type="">
+  <button class="del">Del</button>
+  <button class="add">Add</button>
+  <span class="out">[Вивести масив]</span>
+
+
+  <script>
+    const input = document.querySelector('input')
+    const btnDelete = document.querySelector('.del')
+    const btnAdd = document.querySelector('.add')
+    const out = document.querySelector('.out')
+
+    let users = ['Sasha', 'Kolya', 'Sveta'];
+    let res = "Test";
+
+    out.innerHTML = users;
+
+    btnAdd.addEventListener('click', () => {
+      out.innerHTML = users;
+      if (input.value) {
+        users.push(input.value)
+      } else {
+        input.value = ''
+      }
+    });
+
+    btnDelete.addEventListener('click', () => {
+      users.shift()
+      out.innerHTML = users;
+    });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>localStorage</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .wrapper {
+      width: 400px;
+      margin: 40px auto 0 auto;
+      border: 1px solid rgba(0, 0, 0, .2);
+      padding: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+    }
+
+    [type=checkbox] {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1>Lorem ipsum dolor</h1>
+    <input id="inp" class="form-control" type="text" placeholder="Name">
+    <button id="add" class="add btn btn-block btn-lg btn-primary">add</button>
+
+    <form class="form-signin mt-4">
+      <h2 class="form-signin-heading">This is form</h2>
+      <input type="text" class="form-control">
+      <input id="checkbox" type="checkbox">
+      <button class="btn btn-block btn-lg btn-primary">Confirm</button>
+    </form>
+    <button id="color" class="btn btn-block btn-lg btn-primary">Change color</button>
+  </div>
+
+  <script>
+    const checkbox = document.querySelector('#checkbox'),
+      form = document.querySelector('form'),
+      btnChange = document.querySelector('#color'),
+      inp = document.querySelector('#inp'),
+      btnAdd = document.querySelector('#add')
+
+    //1. введені дані в інпут зберігаються в localStorage
+    inp.addEventListener('change', () => {
+      localStorage.setItem('input', inp.value)
+    })
+
+    //2. приклад
+    let num = 100;
+    let str = "Sasha";
+
+    // Додаємо в localStorage
+    //setItem() приймає два аргументи 1; Ключ 2; значення
+    localStorage.setItem('num', num)
+    localStorage.setItem('srt', str)
+
+    //3. приклад масиви і обєкти
+    let arr = ['Test1', 'Test2']
+    let obj = [
+      {
+        name: 'Sasha 1',
+        age: 12
+      },
+      {
+        name: 'Sasha 2',
+        age: 22
+      },
+    ];
+
+    localStorage.setItem('arr', JSON.stringify(arr))
+    console.log(JSON.parse(localStorage.getItem('arr')))
+
+    //4. приклад 
+    btnAdd.addEventListener('click', () => {
+      obj.push(
+        {
+          name: inp.value,
+          age: 22
+        }
+      )
+
+      localStorage.setItem('obj', JSON.stringify(obj))
+      console.log(JSON.parse(localStorage.getItem('obj')))
+    })
+
+    //перевірка на наявність ключа
+    let newArr = localStorage.getItem('obj') ? JSON.parse(localStorage.getItem('obj')) : []
+    newArr.map(item => console.log(item))
+
+
+
+
+
+
+
+
+
+    //додаємо відмічений чекбокс в localStorage 
+    if (localStorage.getItem('isChecked')) {
+      checkbox.checked = true
+    }
+
+    checkbox.addEventListener('change', () => {
+      localStorage.setItem('isChecked', true)
+    })
+
+    //зберігаємо змінений колір кнопки
+    if (localStorage.getItem('bg') === 'changed') {
+      form.style.backgroundColor = 'red'
+    }
+
+    btnChange.addEventListener('click', () => {
+      if (localStorage.getItem('bg') === 'changed') {
+        localStorage.removeItem('bg')
+        form.style.backgroundColor = '#fff'
+      } else {
+        localStorage.setItem('bg', 'changed')
+        form.style.backgroundColor = 'red'
+      }
+    })
+
+    const persone = {
+      name: 'Alex',
+      age: 25
+    }
+
+    const serializedPersone = JSON.stringify(persone)
+    console.log(serializedPersone)
+
+    localStorage.setItem('alex', serializedPersone)
+
+    console.log(JSON.parse(localStorage.getItem('alex')))
+  </script>
+</body>
+
+</html>

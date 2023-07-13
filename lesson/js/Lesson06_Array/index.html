@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button>Btn 1</button>
+    <button>Btn 2</button>
+    <button>Btn 3</button>
+
+    <h2 class="out"></h2>
+
+    <script>
+        let btn = document.querySelectorAll('button')
+        let out = document.querySelector('.out')
+
+        btn[1].onclick = () => {
+            console.log("Test");
+        }
+
+        const arr = [
+            1,
+            'Sasha',
+            true,
+            function () { console.log('test') },
+            {
+                name: "sasha",
+                age: 22
+            },
+            [1, 2, 3, 4, 5]
+            ,
+            "Sveta"
+        ]
+
+
+
+
+        // Додавання в Масив
+        arr.push("Vova") // Додаємо в кінець
+        arr.unshift('Test') // Додаємо на початок
+
+        // Видаляємо
+        arr.shift() // Видаляє перший єлемент
+        arr.pop() // Видаляє останній єлемент
+
+
+        // Змінювати
+        arr[0] = "Test"
+        arr[1] = 1
+
+
+        console.log("Перший єлемент масиву = " + arr[0]);
+        arr[arr.length] = "Аналог .push()"
+        console.log(arr[arr.length - 1]);
+
+        console.log(arr);
+
+
+        // Зєднання масивів
+
+        const a = [1, 2, 3, 4, 5]
+        const b = [6, 7, 8, 9, 10]
+
+        let res1 = a.concat(b)
+        let res2 = [...a, ...b]
+
+        console.log(res1);
+        console.log(res2);
+
+
+        const arrTest = []
+
+        for (let index = 0; index < arr.length; index++) {
+
+            if (typeof arr[index] == 'string') {
+                arrTest.push(arr[index])
+            }
+        }
+
+        for (let i = 0; i < arrTest.length; i++) {
+            out.innerHTML += arrTest[i] + ' '
+        }
+
+        let arr2 = ['Sasha', 'Sveta', 'Kolya']
+
+        // Old
+        for (let i = 0; i < arr2.length; i++) {
+            out.innerHTML += arr2[i]
+        }
+
+        // New
+        arr2.map(item => out.innerHTML += item)
+
+
+    </script>
+</body>
+
+</html>

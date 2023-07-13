@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input {
+      width: 50px;
+    }
+
+    .btn {
+      width: 100px;
+      padding: 3px;
+      color: aliceblue;
+      background-color: blue;
+      border-radius: 20px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <input class="inp1" type="number">
+  +
+  <input class="inp2" type="number">
+  =
+  <span class="out"></span>
+  <div><button class="btn">Result</button></div>
+  <div><button class="remove">Remove</button></div>
+
+  <script>
+    let inp1 = document.querySelector('.inp1')
+    let inp2 = document.querySelector('.inp2')
+    let btn = document.querySelector('.btn')
+    let out = document.querySelector('.out')
+    let btnRemove = document.querySelector('.remove')
+
+
+
+    btn.addEventListener('click', plus)
+
+    inp1.value = localStorage.getItem('first')
+    inp2.value = localStorage.getItem('second')
+    out.innerHtml = localStorage.getItem('result')
+
+    function plus() {
+      localStorage.setItem('first', inp1.value)
+      localStorage.setItem('second', inp2.value)
+      out.innerHTML = +inp1.value + +inp2.value
+      localStorage.setItem('result', +inp1.value + +inp2.value)
+    }
+
+    btnRemove.addEventListener('click', () => {
+      localStorage.clear()
+      location.reload()
+    })
+
+  </script>
+</body>
+
+</html>

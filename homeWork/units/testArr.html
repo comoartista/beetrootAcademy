@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input class="inp" type="text" placeholder="Name">
+  <button class="btn">add</button>
+
+  <button class="show">Show all</button>
+  <button class="delete">Delete</button>
+  <div class="out">-</div>
+  <span class="text"></span>
+
+
+  <script>
+    let inp = document.querySelector('.inp');
+    let btn = document.querySelector('.btn')
+    let show = document.querySelector('.show')
+    let out = document.querySelector('.out')
+    let text = document.querySelector('.text')
+    let del = document.querySelector('.delete')
+
+
+
+    const Users = []
+
+    btn.onclick = () => {
+      if (inp.value) {
+        Users.push(inp.value)
+        inp.value = ''
+      } else {
+        out.innerHTML = "Введи щось"
+      }
+    }
+
+    show.onclick = () => {
+      out.innerHTML = ''
+      for (let i = 0; i < Users.length; i++) {
+        out.innerHTML += `<h5>${Users[i]}</h5>`
+      }
+    }
+
+    del.onclick = () => {
+      Users.pop()
+      out.innerHTML = ''
+      for (let i = 0; i < Users.length; i++) {
+        out.innerHTML += `<h5>${Users[i]}</h5>`
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    .out {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+
+    .pagination {
+      display: flex;
+      gap: 10px;
+
+    }
+
+    .btn {
+      padding: 5px;
+      border: 1px solid #000;
+      border-radius: 4px;
+      text-decoration: none;
+      color: #000;
+      background: #fff;
+
+    }
+  </style>
+  <header></header>
+  <div class="out">
+    <!-- <div class="cart">
+      <img src="" alt="img">
+      <h2>Name</h2>
+      <h6>Раса: species</h6>
+      <h4>Стан здоровя: status</h4>
+    </div> -->
+  </div>
+
+  <div class="pagination"></div>
+
+  <script>
+    const out = document.querySelector('.out')
+    const pag = document.querySelector('.pagination')
+
+    const env = {
+      name: 'https://rickandmortyapi.com/api/character',
+      apiKey: 'fnefbejbfk'
+    }
+
+    fetch(env.name)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        pagination(data.info.pages)
+        createCards(data.results);
+      })
+      .catch(error => console.log('Помилка серверу' + error))
+
+
+    //через async, древніша штука
+    // async function getData() {
+    //   try {
+    //     let data = await fetch('https://rickandmortyapi.com/api/character')
+    //     let jsonData = await data.json()
+
+    //     console.log(jsonData)
+    //   } catch {
+    //     console.log('Error')
+    //   }
+    // }
+    // getData()
+
+    function createCards(characters) {
+      characters.forEach(character => {
+        const cart = document.createElement('div')
+        cart.classList.add('cart');
+
+        const img = document.createElement('img')
+        img.src = character.image;
+        img.alt = 'img';
+
+        const name = document.createElement('h2')
+        name.textContent = character.name;
+
+        const species = document.createElement('h6')
+        species.textContent = `Раса: ${character.species}`
+
+        const status = document.createElement('h4');
+        status.textContent = `Стан здоров'я: ${character.status}`
+
+        cart.appendChild(img);
+        cart.appendChild(name);
+        cart.appendChild(species);
+        cart.appendChild(status);
+
+        out.appendChild(cart);
+      })
+    }
+
+    function pagination(pages) {
+      for (let i = 1; i <= pages; i++) {
+        const pageLink = document.createElement('a')
+        pageLink.href = '#'
+        pageLink.textContent = i
+        pageLink.classList.add('btn')
+        pag.appendChild(pageLink);
+      }
+    }
+  </script>
+</body>
+
+</html>

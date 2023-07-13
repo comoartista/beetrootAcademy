@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input class="inp1" type="text" placeholder="Name">
+    <input class="inp2" type="number" placeholder="Age">
+    <button class="btn-add">add</button>
+
+    <div class="out">
+        Name: inp1.value <br>
+        Age: inp1.value
+    </div>
+
+    <hr>
+    <input class="serch" type="text" name="" id="">
+    <button class="btn-serch">serch</button>
+    <div class="out2">
+        Name: inp1.value <br>
+        Age: inp1.value
+    </div>
+
+    <hr>
+    <label for="">
+        <input class="age" type="checkbox">
+        <span>Вивести всіх кому 18 років</span>
+    </label>
+    <button class="btn-serch2">serch</button>
+    <div class="out2">
+        Name: inp1.value <br>
+        Age: inp1.value
+    </div>
+
+
+    <script>
+        const inp1 = document.querySelector('.inp1')
+        const inp2 = document.querySelector('.inp2')
+        const btn = document.querySelector('.btn-add')
+        const out = document.querySelector('.out')
+
+
+        const Users = []
+
+        function cteateUser(item) {
+            return `Name: ${item.name} <br> Age: ${item.age} <br>`
+        }
+
+        btn.onclick = () => {
+            out.innerHTML = ''
+            if (inp1.value && inp2.value) {
+                let a = {
+                    name: inp1.value,
+                    age: inp2.value,
+                }
+
+                Users.push(a)
+                console.log(Users);
+                inp1.value = ''
+                inp2.value = ''
+            }
+
+            // Old
+            // for (let i = 0; i < Users.length; i++) {
+            //     out.innerHTML += `Name: ${Users[i].name} <br> Age: ${Users[i].age} <br>`
+            // }
+
+            // New
+            Users.map(user => {
+                // if(item.name === inp1.value) {}
+                out.innerHTML += cteateUser(user)
+            })
+
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>

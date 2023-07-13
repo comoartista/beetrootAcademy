@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container"></div>
+</body>
+
+<script>
+  const container = document.querySelector('.container')
+
+  fetch("https://rickandmortyapi.com/api/character")
+    .then(response => response.json())
+    .then(data => {
+      console.log(data)
+      createCards(data.results)
+    })
+    .catch(error => console.log('Server error' + error))
+
+  function createCards(characters) {
+    characters.forEach(character => {
+      console.log(character)
+      const cart = document.createElement('div')
+
+      const img = document.createElement('img')
+      img.src = character.image
+      img.alt = 'img'
+
+      const name = document.createElement('h2')
+      name.textContent = character.name
+
+      const species = document.createElement('h6')
+      species.textContent = `Раса: ${character.species}`
+
+      const status = document.createElement('h4');
+      status.textContent = `Стан здоров'я: ${character.status}`
+
+      cart.appendChild(img);
+      cart.appendChild(name);
+      cart.appendChild(species);
+      cart.appendChild(status);
+
+      container.appendChild(cart);
+    })
+  }
+
+
+
+
+</script>
+
+</html>

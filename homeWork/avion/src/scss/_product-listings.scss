@@ -1,0 +1,40 @@
+.content {
+  margin-top: 36px;
+ 
+}
+
+.content__container {
+  display: flex;
+  gap: 38px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.aside {
+  width: 195px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.products {
+  position: sticky;
+  top: 150px;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product {
+  &__card {}
+  &__img {}
+  &__details {}
+  &__title {
+    color: var(--dark-primary, #2A254B);
+    font-size: 20px;
+    font-family: Clash Display;
+    line-height: 140%;
+  }
+  &__price {}
+}

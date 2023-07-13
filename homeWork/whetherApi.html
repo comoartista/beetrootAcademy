@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .out {
+    display: flex;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 20px;
+    width: 100px;
+    border: 1px solid #b4c9cb;
+    border-radius: 8px;
+    background: #cfe0e2;
+  }
+</style>
+
+<body>
+  <div class="out"></div>
+
+  <script>
+    const out = document.querySelector('.out')
+    let option = {
+      apiKey: '830fd24b6ad9adce8fb1b8b8bf486d17',
+      city: 'london'
+    }
+
+    function setCity(town) {
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${town}&appid=${option.apiKey}`)
+        .then(data => data.json())
+        .then(data => getCity(data))
+        .catch(error => console.log(err))
+    }
+
+    setCity('London')
+    setCity('Barselona')
+
+    function getCity(data) {
+      const card = document.createElement('div')
+      card.classList.add('card')
+      const name = document.createElement('h2')
+      name.textContent = `${data.name}`
+
+      let temp = document.createElement('div')
+      temp1 = Math.floor(data.main.temp - 273.15)
+
+      let plus = temp1 > 0 ? '+' : ''
+      temp.textContent = `temp: ${plus + temp1}°`
+
+      const img = document.createElement('img')
+      img.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+
+      card.append(name, temp, img)
+      out.append(card)
+
+      console.log(data)
+      console.log(data.weather[0].icon)
+    }
+
+  </script>
+</body>
+
+</html>
