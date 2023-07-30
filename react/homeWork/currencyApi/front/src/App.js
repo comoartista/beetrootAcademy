@@ -1,9 +1,7 @@
 import React from 'react';
 import useFetch from "react-fetch-hook";
 import {useState, useRef} from 'react'
-
 import "./App.css"
-
 
 /*
  1: По кліку на Карточку потрібно робити подію множення
@@ -16,18 +14,20 @@ export default function App() {
 
     const inp = useRef()
     const [out, setOut] = useState(0)
+    const [activeCardIndex, setActiveCardIndex] = useState(null);
 
     const {data, isLoading} = useFetch('https://www.binance.com/bapi/asset/v1/public/asset-service/product/currency')
+    // console.log(data?.data)
 
-    console.log(data?.data)
-
-    function Res(result) {
-      setOut((inp.current.value * result).toFixed(2))
-        console.log(100 * result)
+    function Res(result, i) {
+      setActiveCardIndex(i)
+      setOut((inp.current.value * result.rate).toFixed(2))
     }
+  
 
-    const List = data?.data.map(item => (
-        <div onClick={() => Res(item.rate)} className={"cart"}>
+    const List = data?.data.map((item, i) => (
+        <div onClick={() => Res(item, i)}
+          className={`cart ${activeCardIndex === i ? 'active' : ''}`}>
             <img src={item.imageUrl} alt=""/>
             <h2>{item.pair}</h2>
         </div>
