@@ -18,8 +18,11 @@ export default function App3() {
 
   function newUsers() {
     const newUser = inp.current.value
+    setOut([...out, {name: newUser}])
+    console.log(out);
+    // const newUser = inp.current.value
 
-    setOut([...out, {id: 66, name: newUser, age: 55}])
+    // setOut([...out, {id: 66, name: newUser, age: 55}])
   }
 
   return (
@@ -28,9 +31,7 @@ export default function App3() {
       <input type="text" ref={inp}/>
       <button onClick={newUsers}>Add</button>
       <div>{
-        out.map(item => (
-          <Users item={item}/>
-        ))
+         <Users item={out}/>
       }</div>
     </div>
   )
