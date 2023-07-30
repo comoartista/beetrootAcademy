@@ -1,0 +1,39 @@
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid blue;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.cart:hover {
+  background: red;
+  color: #fff;
+}
+
+.active {
+  background: red;
+  color: #fff;
+}
+
+.carts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+
+img {
+  width: 30px;
+  display: block;
+  height: 30px;
+}
