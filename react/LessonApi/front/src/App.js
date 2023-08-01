@@ -15,7 +15,7 @@ export default function List () {
       <h2>Rick and Morty</h2>
       <ul className="cart">
           {List}
-      </ul>
+      </ul> 
     </>
 )
 };
