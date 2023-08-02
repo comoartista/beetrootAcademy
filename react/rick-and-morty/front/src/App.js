@@ -12,7 +12,8 @@ function App() {
 
   let [fetchedData, updateFetchedData] = useState([])
   let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`
-  let {info, results} = fetchedData
+  let {info, results} = fetchedData;
+
 
   useEffect(() => {
     (async function() {
@@ -42,7 +43,10 @@ function App() {
           </div>
         </div>
       </div>
-      <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber}/>
+      <Pagination 
+        info={info} 
+        pageNumber={pageNumber} 
+        setPageNumber={setPageNumber}/>
     </div>
   );
 }
