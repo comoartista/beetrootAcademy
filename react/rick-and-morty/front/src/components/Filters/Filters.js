@@ -9,6 +9,7 @@ const Filters = ({setStatus, setGender, setSpecies, setPageNumber}) => {
     setGender("")
     setSpecies("")
     setPageNumber("")
+    window.location.reload(false)
   }
   return (
     <div className='col-3'>
